@@ -1,0 +1,108 @@
+.fine {
+  font-size: 0.8rem;
+  color: gray;
+  font-style: italic;
+}
+
+.flex-even {
+  display: flex;
+
+  > button {
+    width: 100%;
+  }
+}
+
+.filters {
+  display: flex;
+  > div {
+    margin-right: 1rem;
+  }
+}
+
+.compare-table {
+  font-size: 0.8rem;
+
+  th {
+    background: #f1f1f1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  img {
+    margin: 0;
+    &.resource {
+      max-width: 1rem;
+      vertical-align: middle;
+    }
+  }
+
+  ul {
+    list-style-position: inside;
+    margin: 0;
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  .upgraded {
+    border-left: 3px solid gold;
+    border-right: 3px solid gold;
+  }
+
+  .Castle {
+    background: lighten(lightskyblue, 20);
+  }
+
+  .Inferno {
+    background: lighten(red, 20);
+  }
+
+  .Rampart {
+    background: lighten(lightgreen, 20);
+  }
+
+  .Tower {
+    background: #fffafa;
+  }
+
+  .Necropolis {
+    background: lighten(lightslategrey, 20);
+  }
+
+  .Dungeon {
+    color: #eee;
+    background: brown;
+  }
+
+  .Stronghold {
+    background: lighten(sandybrown, 20);
+  }
+
+  .Fortress {
+    color: #eee;
+    background: darkolivegreen;
+  }
+
+  .Conflux {
+    color: #eee;
+    background: darkblue;
+  }
+
+  .max {
+    color: #28a745;
+  }
+  .min {
+    color: #dc3545;
+  }
+  .creature {
+    margin-left: 0.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/creatures.png);
+    width: 33px;
+    height: 32px;
+  }
+}

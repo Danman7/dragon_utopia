@@ -1,0 +1,566 @@
+[
+  {
+    "name": "Pikeman",
+    "position": "0px 0px"
+  },
+  {
+    "name": "Halberdier",
+    "position": "-37px 0px"
+  },
+  {
+    "name": "Archer",
+    "position": "-74px 0px"
+  },
+  {
+    "name": "Marksman",
+    "position": "-111px 0px"
+  },
+  {
+    "name": "Griffin",
+    "position": "-148px 0px"
+  },
+  {
+    "name": "Royal Griffin",
+    "position": "-185px 0px"
+  },
+  {
+    "name": "Swordsman",
+    "position": "-222px 0px"
+  },
+  {
+    "name": "Crusader",
+    "position": "-259px 0px"
+  },
+  {
+    "name": "Monk",
+    "position": "-296px 0px"
+  },
+  {
+    "name": "Zealot",
+    "position": "-333px 0px"
+  },
+  {
+    "name": "Cavalier",
+    "position": "-370px 0px"
+  },
+  {
+    "name": "Champion",
+    "position": "-407px 0px"
+  },
+  {
+    "name": "Angel",
+    "position": "-444px 0px"
+  },
+  {
+    "name": "Archangel",
+    "position": "-481px 0px"
+  },
+  {
+    "name": "Centaur",
+    "position": "-518px 0"
+  },
+  {
+    "name": "Centaur Captain",
+    "position": "-555px 0"
+  },
+  {
+    "name": "Dwarf",
+    "position": "-592px 0"
+  },
+  {
+    "name": "Battle Dwarf",
+    "position": "-632px 0"
+  },
+  {
+    "name": "Wood Elf",
+    "position": "-666px 0"
+  },
+  {
+    "name": "Grand Elf",
+    "position": "-703px 0"
+  },
+  {
+    "name": "Pegasus",
+    "position": "-740px 0"
+  },
+  {
+    "name": "Silver Pegasus",
+    "position": "-777px 0"
+  },
+  {
+    "name": "Dendroid Guard",
+    "position": "-814px 0"
+  },
+  {
+    "name": "Dendroid Soldier",
+    "position": "-851px 0"
+  },
+  {
+    "name": "Unicorn",
+    "position": "-888px 0"
+  },
+  {
+    "name": "War Unicorn",
+    "position": "-925px 0"
+  },
+  {
+    "name": "Green Dragon",
+    "position": "-962px 0"
+  },
+  {
+    "name": "Gold Dragon",
+    "position": "-999px 0"
+  },
+  {
+    "name": "Gremlin",
+    "position": "0px -42px"
+  },
+  {
+    "name": "Master Gremlin",
+    "position": "-37px -42px"
+  },
+  {
+    "name": "Stone Gargoyle",
+    "position": "-74px -42px"
+  },
+  {
+    "name": "Obsidian Gargoyle",
+    "position": "-111px -42px"
+  },
+  {
+    "name": "Stone Golem",
+    "position": "-148px -42px"
+  },
+  {
+    "name": "Iron Golem",
+    "position": "-185px -42px"
+  },
+  {
+    "name": "Mage",
+    "position": "-222px -42px"
+  },
+  {
+    "name": "Arch Mage",
+    "position": "-259px -42px"
+  },
+  {
+    "name": "Genie",
+    "position": "-296px -42px"
+  },
+  {
+    "name": "Master Genie",
+    "position": "-333px -42px"
+  },
+  {
+    "name": "Naga",
+    "position": "-370px -42px"
+  },
+  {
+    "name": "Naga Queen",
+    "position": "-407px -42px"
+  },
+  {
+    "name": "Giant",
+    "position": "-444px -42px"
+  },
+  {
+    "name": "Titan",
+    "position": "-481px -42px"
+  },
+  {
+    "name": "Imp",
+    "position": "-518px -42px"
+  },
+  {
+    "name": "Familiar",
+    "position": "-555px -42px"
+  },
+  {
+    "name": "Hell Hound",
+    "position": "-592px -42px"
+  },
+  {
+    "name": "Cerberus",
+    "position": "-632px -42px"
+  },
+  {
+    "name": "Gog",
+    "position": "-666px -42px"
+  },
+  {
+    "name": "Magog",
+    "position": "-703px -42px"
+  },
+  {
+    "name": "Demon",
+    "position": "-740px -42px"
+  },
+  {
+    "name": "Horned Demon",
+    "position": "-777px -42px"
+  },
+  {
+    "name": "Efreeti",
+    "position": "-814px -42px"
+  },
+  {
+    "name": "Efreet Sultan",
+    "position": "-851px -42px"
+  },
+  {
+    "name": "Pit Fiend",
+    "position": "-888px -42px"
+  },
+  {
+    "name": "Pit Lord",
+    "position": "-925px -42px"
+  },
+  {
+    "name": "Devil",
+    "position": "-962px -42px"
+  },
+  {
+    "name": "Arch Devil",
+    "position": "-999px -42px"
+  },
+  {
+    "name": "Skeleton",
+    "position": "0px -80px"
+  },
+  {
+    "name": "Skeleton Warrior",
+    "position": "-37px -80px"
+  },
+  {
+    "name": "Walking Dead",
+    "position": "-74px -80px"
+  },
+  {
+    "name": "Zombie",
+    "position": "-111px -80px"
+  },
+  {
+    "name": "Wight",
+    "position": "-148px -80px"
+  },
+  {
+    "name": "Wraith",
+    "position": "-185px -80px"
+  },
+  {
+    "name": "Vampire",
+    "position": "-222px -80px"
+  },
+  {
+    "name": "Vampire Lord",
+    "position": "-259px -80px"
+  },
+  {
+    "name": "Lich",
+    "position": "-296px -80px"
+  },
+  {
+    "name": "Power Lich",
+    "position": "-333px -80px"
+  },
+  {
+    "name": "Black Knight",
+    "position": "-370px -80px"
+  },
+  {
+    "name": "Dread Knight",
+    "position": "-407px -80px"
+  },
+  {
+    "name": "Bone Dragon",
+    "position": "-444px -80px"
+  },
+  {
+    "name": "Ghost Dragon",
+    "position": "-481px -80px"
+  },
+  {
+    "name": "Troglodyte",
+    "position": "-518px -80px"
+  },
+  {
+    "name": "Infernal Troglodyte",
+    "position": "-555px -80px"
+  },
+  {
+    "name": "Harpy",
+    "position": "-592px -80px"
+  },
+  {
+    "name": "Harpy Hag",
+    "position": "-632px -80px"
+  },
+  {
+    "name": "Beholder",
+    "position": "-666px -80px"
+  },
+  {
+    "name": "Evil Eye",
+    "position": "-703px -80px"
+  },
+  {
+    "name": "Medusa",
+    "position": "-740px -80px"
+  },
+  {
+    "name": "Medusa Queen",
+    "position": "-777px -80px"
+  },
+  {
+    "name": "Minotaur",
+    "position": "-814px -80px"
+  },
+  {
+    "name": "Minotaur King",
+    "position": "-851px -80px"
+  },
+  {
+    "name": "Manticore",
+    "position": "-888px -80px"
+  },
+  {
+    "name": "Scorpicore",
+    "position": "-925px -80px"
+  },
+  {
+    "name": "Red Dragon",
+    "position": "-962px -80px"
+  },
+  {
+    "name": "Black Dragon",
+    "position": "-998px -80px"
+  },
+  {
+    "name": "Goblin",
+    "position": "0px -118px"
+  },
+  {
+    "name": "Hobgoblin",
+    "position": "-37px -118px"
+  },
+  {
+    "name": "Orc",
+    "position": "-74px -118px"
+  },
+  {
+    "name": "Orc Chieftain",
+    "position": "-111px -118px"
+  },
+  {
+    "name": "Wolf Rider",
+    "position": "-148px -118px"
+  },
+  {
+    "name": "Wolf Raider",
+    "position": "-185px -118px"
+  },
+  {
+    "name": "Ogre",
+    "position": "-222px -118px"
+  },
+  {
+    "name": "Ogre Magi",
+    "position": "-259px -118px"
+  },
+  {
+    "name": "Roc",
+    "position": "-296px -118px"
+  },
+  {
+    "name": "Thunderbird",
+    "position": "-333px -118px"
+  },
+  {
+    "name": "Cyclops",
+    "position": "-370px -118px"
+  },
+  {
+    "name": "Cyclops King",
+    "position": "-407px -118px"
+  },
+  {
+    "name": "Behemoth",
+    "position": "-444px -118px"
+  },
+  {
+    "name": "Ancient Behemoth",
+    "position": "-481px -118px"
+  },
+  {
+    "name": "Gnoll",
+    "position": "-518px -118px"
+  },
+  {
+    "name": "Gnoll Maradeur",
+    "position": "-555px -118px"
+  },
+  {
+    "name": "Lizardman",
+    "position": "-592px -118px"
+  },
+  {
+    "name": "Lizard Warrior",
+    "position": "-632px -118px"
+  },
+  {
+    "name": "Gorgon",
+    "position": "-666px -118px"
+  },
+  {
+    "name": "Mighty Gorgon",
+    "position": "-703px -118px"
+  },
+  {
+    "name": "Serpent Fly",
+    "position": "-740px -118px"
+  },
+  {
+    "name": "Dragon Fly",
+    "position": "-777px -118px"
+  },
+  {
+    "name": "Basilisk",
+    "position": "-814px -118px"
+  },
+  {
+    "name": "Greater Basilisk",
+    "position": "-851px -118px"
+  },
+  {
+    "name": "Wyvern",
+    "position": "-888px -118px"
+  },
+  {
+    "name": "Wyvern Monarch",
+    "position": "-925px -118px"
+  },
+  {
+    "name": "Hydra",
+    "position": "-962px -118px"
+  },
+  {
+    "name": "Chaos Hydra",
+    "position": "-998px -118px"
+  },
+  {
+    "name": "Pixie",
+    "position": "0 -157px"
+  },
+  {
+    "name": "Sprite",
+    "position": "-37px -157px"
+  },
+  {
+    "name": "Air Elemental",
+    "position": "-71px -157px"
+  },
+  {
+    "name": "Storm Elemental",
+    "position": "-109px -157px"
+  },
+  {
+    "name": "Water Elemental",
+    "position": "-140px -157px"
+  },
+  {
+    "name": "Ice Elemental",
+    "position": "-177px -157px"
+  },
+  {
+    "name": "Fire Elemental",
+    "position": "-213px -157px"
+  },
+  {
+    "name": "Energy Elemental",
+    "position": "-248px -157px"
+  },
+  {
+    "name": "Earth Elemental",
+    "position": "-281px -157px"
+  },
+  {
+    "name": "Magma Elemental",
+    "position": "-317px -157px"
+  },
+  {
+    "name": "Psychic Elemental",
+    "position": "-347px -157px"
+  },
+  {
+    "name": "Magic Elemental",
+    "position": "-384px -157px"
+  },
+  {
+    "name": "Firebird",
+    "position": "-415px -157px"
+  },
+  {
+    "name": "Phoenix",
+    "position": "-454px -157px"
+  },
+  {
+    "name": "Gold Golem",
+    "position": "-499px -157px"
+  },
+  {
+    "name": "Diamond Golem",
+    "position": "-536px -157px"
+  },
+  {
+    "name": "Peasant",
+    "position": "-275px -201px"
+  },
+  {
+    "name": "Boar",
+    "position": "-312px -201px"
+  },
+  {
+    "name": "Halfling",
+    "position": "-240px -201px"
+  },
+  {
+    "name": "Rogue",
+    "position": "-424px -201px"
+  },
+  {
+    "name": "Mummy",
+    "position": "-348px -201px"
+  },
+  {
+    "name": "Nomad",
+    "position": "-386px -201px"
+  },
+  {
+    "name": "Troll",
+    "position": "-459px -201px"
+  },
+  {
+    "name": "Sharpshooter",
+    "position": "-201px -201px"
+  },
+  {
+    "name": "Enchanter",
+    "position": "-165px -201px"
+  },
+  {
+    "name": "Faerie Dragon",
+    "position": "-90px -201px"
+  },
+  {
+    "name": "Rust Dragon",
+    "position": "-125px -201px"
+  },
+  {
+    "name": "Crystal Dragon",
+    "position": "-53px -201px"
+  },
+  {
+    "name": "Azure Dragon",
+    "position": "-17px -201px"
+  }
+]
