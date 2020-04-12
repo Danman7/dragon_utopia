@@ -1,21 +1,28 @@
+body {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
 .fine {
   font-size: 0.8rem;
   color: gray;
   font-style: italic;
 }
 
-.flex-even {
-  display: flex;
-
-  > button {
-    width: 100%;
-  }
+.navbar li {
+  margin-bottom: 0;
 }
 
 .filters {
   display: flex;
   > div {
     margin-right: 1rem;
+  }
+  label {
+    margin-bottom: 0;
   }
 }
 

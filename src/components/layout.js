@@ -5,7 +5,8 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import './layout.scss'
+import 'bootstrap/dist/css/bootstrap.css'
+
 import './styles.scss'
 
 import { graphql, useStaticQuery } from 'gatsby'
@@ -17,6 +18,20 @@ import Header from './header'
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
+      allStrapiCategory(
+        filter: { name: { in: ["Towns", "Heroes", "Guides"] } }
+      ) {
+        edges {
+          node {
+            name
+            articles {
+              id
+              slug
+              title
+            }
+          }
+        }
+      }
       site {
         siteMetadata {
           title
@@ -25,9 +40,14 @@ const Layout = ({ children }) => {
     }
   `)
 
+  console.log(data.allStrapiCategory.edges.map(item => item.node))
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        categories={data.allStrapiCategory.edges.map(item => item.node)}
+      />
       <div
         style={{
           margin: `0 auto`,

@@ -56,9 +56,21 @@ export default ({ column }) => {
           </label>{' '}
         </div>
       ))}
-      <div className="flex-even">
-        <button onClick={() => setFilter([])}>None</button>
-        <button onClick={() => setFilter(allOptions)}>All</button>
+      <div>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => setFilter([])}
+        >
+          None
+        </button>
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => setFilter(allOptions)}
+        >
+          All
+        </button>
       </div>
     </div>
   )
