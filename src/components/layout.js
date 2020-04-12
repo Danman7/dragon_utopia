@@ -46,13 +46,7 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata.title}
         categories={data.allStrapiCategory.edges.map(item => item.node)}
       />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`
-        }}
-      >
+      <div className="container">
         <main>{children}</main>
       </div>
     </>
