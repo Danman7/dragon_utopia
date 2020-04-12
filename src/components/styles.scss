@@ -2,6 +2,10 @@ body {
   font-family: 'Roboto Slab', sans-serif;
 }
 
+main {
+  margin-top: 5rem;
+}
+
 h1 {
   margin-bottom: 1.5rem;
 }
@@ -34,7 +38,7 @@ h1 {
     background: #f1f1f1;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 56px;
     z-index: 2;
   }
 
@@ -53,11 +57,6 @@ h1 {
     li {
       margin-bottom: 0;
     }
-  }
-
-  .upgraded {
-    border-left: 3px solid gold;
-    border-right: 3px solid gold;
   }
 
   .Castle {

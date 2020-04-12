@@ -46,9 +46,9 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata.title}
         categories={data.allStrapiCategory.edges.map(item => item.node)}
       />
-      <div className="container">
+      <main className="container">
         <main>{children}</main>
-      </div>
+      </main>
     </>
   )
 }

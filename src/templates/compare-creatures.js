@@ -269,12 +269,7 @@ const CompareCreaturesTemplate = ({ data }) => {
               prepareRow(row)
 
               return (
-                <tr
-                  {...row.getRowProps()}
-                  className={`${row.original.town}${
-                    row.original.upgrade === 'Upgraded' ? ' upgraded' : ''
-                  }`}
-                >
+                <tr {...row.getRowProps()} className={`${row.original.town}`}>
                   {row.cells.map(cell => {
                     const ratings =
                       typeof cell.value === 'number' &&
