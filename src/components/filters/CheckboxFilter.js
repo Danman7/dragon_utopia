@@ -57,20 +57,22 @@ export default ({ column }) => {
         </div>
       ))}
       <div>
-        <button
-          type="button"
-          className="btn btn-secondary"
-          onClick={() => setFilter([])}
-        >
-          None
-        </button>
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={() => setFilter(allOptions)}
-        >
-          All
-        </button>
+        <div class="btn-group" role="group">
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={() => setFilter([])}
+          >
+            None
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={() => setFilter(allOptions)}
+          >
+            All
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import { useFilters, useGlobalFilter, useSortBy, useTable } from 'react-table'
 
 import CheckboxFilter from '../components/filters/CheckboxFilter'
+import Search from '../components/filters/Search'
 import Layout from '../components/layout'
 import spriteLocations from '../data/spritelocations.json'
 import creatures from '../data/units.json'
@@ -33,7 +34,6 @@ const checkboxFilter = (rows, id, filterValue) => {
 
 const CompareCreaturesTemplate = ({ data }) => {
   const { title, description } = data.strapiCompareCreatures
-
   const spring = useMemo(
     () => ({
       type: 'spring',
@@ -175,11 +175,14 @@ const CompareCreaturesTemplate = ({ data }) => {
     []
   )
 
+  const onSearch = value => {
+    setGlobalFilter(value)
+  }
+
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    state,
     columns,
     rows,
     prepareRow,
@@ -200,27 +203,17 @@ const CompareCreaturesTemplate = ({ data }) => {
     columns.find(column => column.id === 'town').toggleHidden()
   }, [])
 
+  console.log()
+
   return (
     <Layout>
       <h1>{title}</h1>
       <ReactMarkdown source={description} />
 
       {/* Filters */}
-      <div className="filters">
-        <label htmlFor="global-search">
-          <div>
-            <strong>Search</strong>
-          </div>
-          <input
-            id="global-search"
-            value={state.globalFilter || ''}
-            onChange={e => {
-              setGlobalFilter(e.target.value || undefined) // Set undefined to remove the filter entirely
-            }}
-            placeholder="Type anything..."
-          />
-        </label>
-      </div>
+      <Search onSearch={onSearch} />
+
+      <p className="fine">{rows.length} results</p>
       <div className="filters">
         <CheckboxFilter
           column={columns.find(column => column.id === 'level')}

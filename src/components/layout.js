@@ -40,8 +40,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  console.log(data.allStrapiCategory.edges.map(item => item.node))
-
   return (
     <>
       <Header
