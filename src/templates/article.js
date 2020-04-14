@@ -16,7 +16,7 @@ const ArticleTemplate = ({ data }) => {
       {thumb && <Img fixed={thumb.childImageSharp.fixed} />}
       <ReactMarkdown
         source={content}
-        transformImageUri={uri => `http://localhost:1337${uri}`}
+        transformImageUri={uri => `${process.env.GATSBY_API_URL}${uri}`}
       />
     </Layout>
   )

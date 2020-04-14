@@ -149,7 +149,7 @@ const CompareCreaturesTemplate = ({ data }) => {
             () =>
               Math.round(
                 info.rows.reduce(
-                  (sum, row) => row.original.minDamage + sum,
+                  (sum, row) => (row.original.minDamage || 0) + sum,
                   0
                 ) / info.rows.length
               ),
@@ -220,8 +220,6 @@ const CompareCreaturesTemplate = ({ data }) => {
     columns.find(column => column.id === 'upgrade').toggleHidden()
     columns.find(column => column.id === 'town').toggleHidden()
   }, [])
-
-  console.log()
 
   return (
     <Layout>

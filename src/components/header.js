@@ -6,7 +6,7 @@ import React from 'react'
 
 const Header = ({ siteTitle, categories }) => (
   <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+    <div className="container">
       <Link className="navbar-brand" to="/">
         {siteTitle}
       </Link>
@@ -26,7 +26,7 @@ const Header = ({ siteTitle, categories }) => (
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           {categories.map(category => (
-            <li className="nav-item dropdown">
+            <li className="nav-item dropdown" key={category.id}>
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -40,7 +40,11 @@ const Header = ({ siteTitle, categories }) => (
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 {category.articles.map(article => (
-                  <Link className="dropdown-item" to={`/${article.slug}`}>
+                  <Link
+                    className="dropdown-item"
+                    to={`/${article.slug}`}
+                    key={article.id}
+                  >
                     {article.title}
                   </Link>
                 ))}

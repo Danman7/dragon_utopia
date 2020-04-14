@@ -19,10 +19,11 @@ const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       allStrapiCategory(
-        filter: { name: { in: ["Towns", "Heroes", "Guides"] } }
+        filter: { name: { in: ["Towns", "Heroes", "Guides", "Matchups"] } }
       ) {
         edges {
           node {
+            id
             name
             articles {
               id
@@ -39,6 +40,8 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  console.log(process.env.ENABLE_GATSBY_REFRESH_ENDPOINT)
 
   return (
     <>
