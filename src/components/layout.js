@@ -41,8 +41,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  console.log(process.env.ENABLE_GATSBY_REFRESH_ENDPOINT)
-
   return (
     <>
       <Header

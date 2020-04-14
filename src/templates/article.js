@@ -6,18 +6,27 @@ import ReactMarkdown from 'react-markdown'
 import Layout from '../components/layout'
 
 const ArticleTemplate = ({ data }) => {
-  const { title, thumb, content, mentions } = data.strapiArticle
+  console.log(data)
+
+  const { title, sections } = data.strapiArticle
 
   return (
     <Layout>
       <h1>{title}</h1>
 
-      {mentions && <p className="fine">{mentions}</p>}
-      {thumb && <Img fixed={thumb.childImageSharp.fixed} />}
-      <ReactMarkdown
+      {sections.map(section => (
+        <div className={section.className || ''}>
+          <ReactMarkdown
+            source={section.content}
+            transformImageUri={uri => `${process.env.GATSBY_API_URL}${uri}`}
+          />
+        </div>
+      ))}
+
+      {/* <ReactMarkdown
         source={content}
         transformImageUri={uri => `${process.env.GATSBY_API_URL}${uri}`}
-      />
+      /> */}
     </Layout>
   )
 }
@@ -28,8 +37,12 @@ export const query = graphql`
   query ArticleTemplate($id: String!) {
     strapiArticle(id: { eq: $id }) {
       title
-      content
-      mentions
+      slug
+      sections {
+        className
+        content
+        id
+      }
     }
   }
 `
