@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto Slab', sans-serif;
+  background: url(../images/background.jpg);
 }
 
 main {
@@ -44,6 +45,7 @@ ul {
 .section {
   display: inline-block;
   width: 50%;
+  vertical-align: top;
 }
 
 .fine {

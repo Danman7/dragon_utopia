@@ -1,6 +1,5 @@
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import React, { useEffect } from 'react'
+import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
 import Layout from '../components/layout'
@@ -22,11 +21,6 @@ const ArticleTemplate = ({ data }) => {
           />
         </div>
       ))}
-
-      {/* <ReactMarkdown
-        source={content}
-        transformImageUri={uri => `${process.env.GATSBY_API_URL}${uri}`}
-      /> */}
     </Layout>
   )
 }
