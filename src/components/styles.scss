@@ -10,6 +10,37 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+ul {
+  list-style-position: inside;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.2rem;
+  }
+}
+
+.pros,
+.cons {
+  ul {
+    list-style-type: none;
+
+    li {
+      padding-left: 2rem;
+      background-position: 0 0.3rem;
+      background-size: 1rem;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.pros ul li {
+  background-image: url(../images/plus.png);
+}
+
+.cons ul li {
+  background-image: url(../images/minus.png);
+}
+
 .section {
   display: inline-block;
   width: 50%;
@@ -52,15 +83,6 @@ h1 {
     &.resource {
       max-width: 1rem;
       vertical-align: middle;
-    }
-  }
-
-  ul {
-    list-style-position: inside;
-    margin: 0;
-
-    li {
-      margin-bottom: 0;
     }
   }
 
