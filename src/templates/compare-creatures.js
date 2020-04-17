@@ -31,7 +31,7 @@ const checkboxFilter = (rows, id, filterValue) => {
   })
 }
 
-const CompareCreaturesTemplate = ({ data }) => {
+const CompareCreaturesTemplate = React.memo(({ data }) => {
   const { title, description } = data.strapiCompareCreatures
 
   const creaturesData = useMemo(() => creatures, [])
@@ -392,7 +392,7 @@ const CompareCreaturesTemplate = ({ data }) => {
       </div>
     </Layout>
   )
-}
+})
 
 export default CompareCreaturesTemplate
 
