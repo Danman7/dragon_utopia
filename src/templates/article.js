@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
@@ -7,14 +8,21 @@ import Layout from '../components/layout'
 const ArticleTemplate = ({ data }) => {
   console.log(data)
 
-  const { title, sections } = data.strapiArticle
+  const { title, sections, headerImage } = data.strapiArticle
 
   return (
     <Layout>
       <h1>{title}</h1>
 
-      {sections.map(section => (
-        <div className={section.className || ''}>
+      {headerImage && (
+        <Img
+          fluid={headerImage.childImageSharp.fluid}
+          className="header-image"
+        />
+      )}
+
+      {sections.map((section, i) => (
+        <div className={section.className || ''} key={`section-${i}`}>
           <ReactMarkdown
             source={section.content}
             transformImageUri={uri => `${process.env.GATSBY_API_URL}${uri}`}
@@ -32,6 +40,13 @@ export const query = graphql`
     strapiArticle(id: { eq: $id }) {
       title
       slug
+      headerImage {
+        childImageSharp {
+          fluid(maxWidth: 1140) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       sections {
         className
         content
