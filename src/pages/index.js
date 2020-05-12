@@ -1,40 +1,51 @@
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 import Layout from '../components/layout'
+import { Parallax } from 'react-scroll-parallax'
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <ul>
-      <h2>
-        <Link to={`/compare-creatures`}>Compare Creatures</Link>
-      </h2>
-      {data.allStrapiArticle.edges.map(document => (
-        <li key={document.node.id}>
-          <h2>
-            <Link to={`/${document.node.slug}`}>{document.node.title}</Link>
-          </h2>
+const IndexPage = ({ data }) => {
+  const { title, lead, content, titleImage } = data.strapiHome
 
-          {document.node.thumb && (
-            <Img fixed={document.node.thumb.childImageSharp.fixed} />
-          )}
-        </li>
-      ))}
-    </ul>
-  </Layout>
-)
+  return (
+    <Layout>
+      <div className="title-wrapper">
+        <div className="container">
+          <div className="jumbotron">
+            <h1 className="display-4">{title}</h1>
+            <hr className="my-4" />
+            <p className="lead">{lead}</p>
+          </div>
+        </div>
+        <div className="overlay"></div>
+        <div className="site-title-image">
+          <Parallax y={[-40, 40]}>
+            <Img fixed={titleImage.childImageSharp.fixed} />
+          </Parallax>
+        </div>
+      </div>
+      <div className="container home-content">
+        <ReactMarkdown source={content} />
+      </div>
+    </Layout>
+  )
+}
 
 export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allStrapiArticle {
-      edges {
-        node {
-          id
-          slug
-          title
+    strapiHome {
+      content
+      title
+      lead
+      titleImage {
+        childImageSharp {
+          fixed(width: 1200) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }

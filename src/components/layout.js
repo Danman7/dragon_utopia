@@ -12,6 +12,7 @@ import './styles.scss'
 import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Header from './header'
 
@@ -47,7 +48,9 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata.title}
         categories={data.allStrapiCategory.edges.map(item => item.node)}
       />
-      <main className="container">{children}</main>
+      <ParallaxProvider>
+        <main>{children}</main>
+      </ParallaxProvider>
     </>
   )
 }

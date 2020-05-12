@@ -19,7 +19,7 @@ module.exports = {
         apiURL: 'https://dragon-utopia-cms.herokuapp.com',
         queryLimit: 1000,
         contentTypes: [`article`, `category`],
-        singleTypes: [`compare-creatures`]
+        singleTypes: [`compare-creatures`, `home`]
       }
     },
     'gatsby-transformer-sharp',
