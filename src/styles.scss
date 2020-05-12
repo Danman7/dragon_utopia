@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto Slab', sans-serif;
-  background: url(../images/background.jpg);
+  background: url(./images/background.jpg);
   text-align: justify;
   margin-bottom: 2rem;
 }
@@ -125,11 +125,11 @@ ul {
 }
 
 .pros ul li {
-  background-image: url(../images/plus.png);
+  background-image: url(./images/plus.png);
 }
 
 .cons ul li {
-  background-image: url(../images/minus.png);
+  background-image: url(./images/minus.png);
 }
 
 .section {
@@ -247,7 +247,7 @@ ul {
     margin-left: 0.1rem;
     display: inline-block;
     vertical-align: middle;
-    background-image: url(../images/creatures.png);
+    background-image: url(./images/creatures.png);
     width: 33px;
     height: 32px;
   }

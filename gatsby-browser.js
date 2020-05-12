@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+
+import 'jquery/dist/jquery.min.js'
+import 'popper.js/dist/popper.min'
+import 'bootstrap/js/dist/dropdown'

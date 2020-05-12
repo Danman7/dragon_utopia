@@ -1,5 +1,3 @@
-import 'bootstrap/js/dist/dropdown'
-
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'

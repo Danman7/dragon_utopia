@@ -7,7 +7,7 @@
 
 import 'bootstrap/dist/css/bootstrap.css'
 
-import './styles.scss'
+import '../styles.scss'
 
 import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
