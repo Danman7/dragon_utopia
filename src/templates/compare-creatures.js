@@ -223,172 +223,183 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <ReactMarkdown source={description} />
+      <div className="container">
+        <h1>{title}</h1>
+        <ReactMarkdown source={description} />
 
-      {/* Filters */}
-      <Search onSearch={onSearch} />
+        {/* Filters */}
+        <Search onSearch={onSearch} />
 
-      <p className="fine">{rows.length} results</p>
-      <div className="filters">
-        <CheckboxFilter
-          column={columns.find(column => column.id === 'level')}
-        />
-        <CheckboxFilter column={columns.find(column => column.id === 'town')} />
-        <CheckboxFilter
-          column={columns.find(column => column.id === 'upgrade')}
-        />
-      </div>
+        <p className="fine">{rows.length} results</p>
+        <div className="filters">
+          <CheckboxFilter
+            column={columns.find(column => column.id === 'level')}
+          />
+          <CheckboxFilter
+            column={columns.find(column => column.id === 'town')}
+          />
+          <CheckboxFilter
+            column={columns.find(column => column.id === 'upgrade')}
+          />
+        </div>
 
-      {/* Table */}
+        {/* Table */}
 
-      <div className="tableWrap">
-        <table {...getTableProps()} className="compare-table">
-          <thead>
-            {headerGroups.map(headerGroup => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map(column => (
-                  <th {...column.getHeaderProps(column.getSortByToggleProps())}>
-                    {column.render('Header')}
-                    <span>
-                      {column.isSorted
-                        ? column.isSortedDesc
-                          ? ' 🔽'
-                          : ' 🔼'
-                        : ''}
-                    </span>
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()}>
-            {rows.map(row => {
-              prepareRow(row)
-
-              return (
-                <tr {...row.getRowProps()} className={`${row.original.town}`}>
-                  {row.cells.map(cell => {
-                    const ratings =
-                      typeof cell.value === 'number' &&
-                      cell.column.id !== 'level'
-                        ? rows.map(row => row.values[cell.column.id])
-                        : false
-
-                    const spriteLocation = spriteLocations.find(
-                      item => item.name === cell.value
-                    )
-
-                    // Cell render
-                    return (
-                      <td
-                        {...cell.getCellProps()}
-                        className={
-                          !!ratings && cell.value === Math.max(...ratings)
-                            ? `${cell.column.id === 'cost' ? 'min' : 'max'}`
-                            : !!ratings && cell.value === Math.min(...ratings)
-                            ? `${cell.column.id === 'cost' ? 'max' : 'min'}`
-                            : ''
-                        }
-                      >
-                        {cell.column.id === 'name' && spriteLocation && (
-                          <div
-                            className="creature"
-                            style={{
-                              backgroundPosition: spriteLocation.position
-                            }}
-                          ></div>
-                        )}
-                        {cell.column.id === 'cost' && (
-                          <img
-                            src={gold}
-                            className="resource"
-                            alt="stack of coins"
-                          />
-                        )}{' '}
-                        {cell.column.id === 'maxDamage' &&
-                          cell.row.original.minDamage &&
-                          `${cell.row.original.minDamage}-`}
-                        {Array.isArray(cell.value) && cell.value.length > 1 ? (
-                          <ul>
-                            {cell.value.map((item, index) => (
-                              <li
-                                key={`${cell.row.original.name}-special-${index}`}
-                              >
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        ) : (
-                          cell.render('Cell')
-                        )}
-                        {cell.column.id === 'cost' &&
-                          cell.row.original.extraCost && (
-                            <div
-                              style={{
-                                display: 'inline-block'
-                              }}
-                            >
-                              {' '}
-                              <img
-                                src={
-                                  resourceImgs[
-                                    cell.row.original.extraCost.resource
-                                  ]
-                                }
-                                className="resource"
-                                alt="extra resource"
-                              />
-                              {` ${cell.row.original.extraCost.value}`}
-                            </div>
-                          )}
-                        {cell.column.id === 'population' &&
-                          cell.row.original.bonusPopulation && (
-                            <span> + {cell.row.original.bonusPopulation}</span>
-                          )}
-                        {cell.column.id === 'name' && cell.row.original.shots && (
-                          <span>
-                            {' '}
-                            <img
-                              src={shooter}
-                              className="resource"
-                              title={`Creature has a ranged attack, with ${cell.row.original.shots} shots`}
-                              alt="ranged attack"
-                            ></img>{' '}
-                            <sup>{cell.row.original.shots}</sup>
-                          </span>
-                        )}
-                        {cell.column.id === 'name' &&
-                          cell.row.original.movement === 'flying' && (
-                            <span>
-                              {' '}
-                              <img
-                                src={flying}
-                                className="resource"
-                                title="Creature can move over obstacles."
-                                alt="unit can move beyond obstacles"
-                              ></img>
-                            </span>
-                          )}
-                      </td>
-                    )
-                  })}
+        <div className="tableWrap">
+          <table {...getTableProps()} className="compare-table">
+            <thead>
+              {headerGroups.map(headerGroup => (
+                <tr {...headerGroup.getHeaderGroupProps()}>
+                  {headerGroup.headers.map(column => (
+                    <th
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                    >
+                      {column.render('Header')}
+                      <span>
+                        {column.isSorted
+                          ? column.isSortedDesc
+                            ? ' 🔽'
+                            : ' 🔼'
+                          : ''}
+                      </span>
+                    </th>
+                  ))}
                 </tr>
-              )
-            })}
-          </tbody>
-          <tfoot>
-            {footerGroups.map(group => (
-              <tr {...group.getFooterGroupProps()}>
-                {group.headers.map(column => (
-                  <td {...column.getFooterProps()}>
-                    {column.render('Footer')}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tfoot>
-        </table>
+              ))}
+            </thead>
+            <tbody {...getTableBodyProps()}>
+              {rows.map(row => {
+                prepareRow(row)
+
+                return (
+                  <tr {...row.getRowProps()} className={`${row.original.town}`}>
+                    {row.cells.map(cell => {
+                      const ratings =
+                        typeof cell.value === 'number' &&
+                        cell.column.id !== 'level'
+                          ? rows.map(row => row.values[cell.column.id])
+                          : false
+
+                      const spriteLocation = spriteLocations.find(
+                        item => item.name === cell.value
+                      )
+
+                      // Cell render
+                      return (
+                        <td
+                          {...cell.getCellProps()}
+                          className={
+                            !!ratings && cell.value === Math.max(...ratings)
+                              ? `${cell.column.id === 'cost' ? 'min' : 'max'}`
+                              : !!ratings && cell.value === Math.min(...ratings)
+                              ? `${cell.column.id === 'cost' ? 'max' : 'min'}`
+                              : ''
+                          }
+                        >
+                          {cell.column.id === 'name' && spriteLocation && (
+                            <div
+                              className="creature"
+                              style={{
+                                backgroundPosition: spriteLocation.position
+                              }}
+                            ></div>
+                          )}
+                          {cell.column.id === 'cost' && (
+                            <img
+                              src={gold}
+                              className="resource"
+                              alt="stack of coins"
+                            />
+                          )}{' '}
+                          {cell.column.id === 'maxDamage' &&
+                            cell.row.original.minDamage &&
+                            `${cell.row.original.minDamage}-`}
+                          {Array.isArray(cell.value) &&
+                          cell.value.length > 1 ? (
+                            <ul>
+                              {cell.value.map((item, index) => (
+                                <li
+                                  key={`${cell.row.original.name}-special-${index}`}
+                                >
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            cell.render('Cell')
+                          )}
+                          {cell.column.id === 'cost' &&
+                            cell.row.original.extraCost && (
+                              <div
+                                style={{
+                                  display: 'inline-block'
+                                }}
+                              >
+                                {' '}
+                                <img
+                                  src={
+                                    resourceImgs[
+                                      cell.row.original.extraCost.resource
+                                    ]
+                                  }
+                                  className="resource"
+                                  alt="extra resource"
+                                />
+                                {` ${cell.row.original.extraCost.value}`}
+                              </div>
+                            )}
+                          {cell.column.id === 'population' &&
+                            cell.row.original.bonusPopulation && (
+                              <span>
+                                {' '}
+                                + {cell.row.original.bonusPopulation}
+                              </span>
+                            )}
+                          {cell.column.id === 'name' &&
+                            cell.row.original.shots && (
+                              <span>
+                                {' '}
+                                <img
+                                  src={shooter}
+                                  className="resource"
+                                  title={`Creature has a ranged attack, with ${cell.row.original.shots} shots`}
+                                  alt="ranged attack"
+                                ></img>{' '}
+                                <sup>{cell.row.original.shots}</sup>
+                              </span>
+                            )}
+                          {cell.column.id === 'name' &&
+                            cell.row.original.movement === 'flying' && (
+                              <span>
+                                {' '}
+                                <img
+                                  src={flying}
+                                  className="resource"
+                                  title="Creature can move over obstacles."
+                                  alt="unit can move beyond obstacles"
+                                ></img>
+                              </span>
+                            )}
+                        </td>
+                      )
+                    })}
+                  </tr>
+                )
+              })}
+            </tbody>
+            <tfoot>
+              {footerGroups.map(group => (
+                <tr {...group.getFooterGroupProps()}>
+                  {group.headers.map(column => (
+                    <td {...column.getFooterProps()}>
+                      {column.render('Footer')}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tfoot>
+          </table>
+        </div>
       </div>
     </Layout>
   )
