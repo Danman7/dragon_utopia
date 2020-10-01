@@ -1,3 +1,5 @@
+import './compare-creatures.scss'
+
 import { graphql } from 'gatsby'
 import React, { useEffect, useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'

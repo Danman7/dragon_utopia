@@ -1,13 +1,5 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import 'bootstrap/dist/css/bootstrap.css'
-
-import '../styles.scss'
+import '../sass/styles.scss'
+import '../game-icons.css'
 
 import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -49,7 +41,7 @@ const Layout = ({ children }) => {
         categories={data.allStrapiCategory.edges.map(item => item.node)}
       />
       <ParallaxProvider>
-        <main>{children}</main>
+        <div>{children}</div>
       </ParallaxProvider>
     </>
   )

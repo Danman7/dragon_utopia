@@ -16,10 +16,10 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: 'https://dragon-utopia-cms.herokuapp.com',
-        queryLimit: 1000,
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
         contentTypes: [`article`, `category`],
-        singleTypes: [`compare-creatures`, `home`]
+        singleTypes: [`home`, `compare-creatures`]
       }
     },
     'gatsby-transformer-sharp',
@@ -37,12 +37,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography.js'
-      }
-    }
+    'gatsby-plugin-sass'
   ]
 }

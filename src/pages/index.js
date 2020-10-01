@@ -2,33 +2,30 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import { Parallax } from 'react-scroll-parallax'
 
 import Layout from '../components/layout'
-import { Parallax } from 'react-scroll-parallax'
 
 const IndexPage = ({ data }) => {
   const { title, lead, content, titleImage } = data.strapiHome
 
   return (
     <Layout>
-      <div className="title-wrapper">
-        <div className="container">
-          <div className="jumbotron">
-            <h1 className="display-4">{title}</h1>
-            <hr className="my-4" />
-            <p className="lead">{lead}</p>
+      <header>
+        <h1>{title}</h1>
+        <p className="lead">{lead}</p>
+        {titleImage && (
+          <div className="title-image">
+            <Parallax y={[-40, 40]}>
+              <Img fluid={titleImage.childImageSharp.fluid} />
+            </Parallax>
           </div>
-        </div>
+        )}
         <div className="overlay"></div>
-        <div className="site-title-image">
-          <Parallax y={[-40, 40]}>
-            <Img fixed={titleImage.childImageSharp.fixed} />
-          </Parallax>
-        </div>
-      </div>
-      <div className="container home-content">
+      </header>
+      <main>
         <ReactMarkdown source={content} />
-      </div>
+      </main>
     </Layout>
   )
 }
@@ -43,8 +40,8 @@ export const pageQuery = graphql`
       lead
       titleImage {
         childImageSharp {
-          fixed(width: 1200) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

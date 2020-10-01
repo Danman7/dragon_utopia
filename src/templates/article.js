@@ -38,13 +38,6 @@ export const query = graphql`
     strapiArticle(id: { eq: $id }) {
       title
       slug
-      headerImage {
-        childImageSharp {
-          fluid(maxWidth: 1140) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       sections {
         className
         content

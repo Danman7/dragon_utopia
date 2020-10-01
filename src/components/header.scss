@@ -1,0 +1,55 @@
+@import '../sass/variables';
+
+nav {
+  padding: 1rem;
+  background-color: $primary-color;
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  .container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  i {
+    letter-spacing: 1rem;
+
+    &.game-icon-plain-arrow {
+      vertical-align: bottom;
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .brand {
+    font-size: 1.5rem;
+  }
+
+  .dropdown-toggle {
+    position: relative;
+    cursor: pointer;
+
+    .dropdown-menu {
+      background-color: $primary-color;
+      z-index: 10;
+      position: absolute;
+      padding: 1rem;
+      left: -1rem;
+      display: none;
+
+      a {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &:hover {
+      .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
