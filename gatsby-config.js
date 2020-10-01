@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://dashboard.heroku.com/`,
+        apiURL: `https://dragon-utopia-cms.herokuapp.com`,
         queryLimit: 1000, // Default to 100
         contentTypes: [`article`, `category`],
         singleTypes: [`home`, `compare-creatures`]
