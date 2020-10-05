@@ -13,20 +13,25 @@ const ArticleTemplate = ({ data }) => {
 
   return (
     <Layout>
-      {headerImage && (
-        <Parallax className="header-image" y={[-20, 20]}>
-          <Img fluid={headerImage.childImageSharp.fluid} />
-        </Parallax>
-      )}
-      <div className="container">
+      <header>
         <h1>{title}</h1>
-
+        {/* <p className="lead">{lead}</p> */}
+        {headerImage && (
+          <div className="title-image">
+            <Parallax y={[-40, 40]}>
+              <Img fluid={headerImage.childImageSharp.fluid} />
+            </Parallax>
+          </div>
+        )}
+        <div className="overlay"></div>
+      </header>
+      <main>
         {sections.map((section, i) => (
           <div className={section.className || ''} key={`section-${i}`}>
             <ReactMarkdown source={section.content} />
           </div>
         ))}
-      </div>
+      </main>
     </Layout>
   )
 }
@@ -38,6 +43,13 @@ export const query = graphql`
     strapiArticle(id: { eq: $id }) {
       title
       slug
+      headerImage {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       sections {
         className
         content
