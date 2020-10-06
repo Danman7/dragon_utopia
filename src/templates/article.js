@@ -1,28 +1,17 @@
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Parallax } from 'react-scroll-parallax'
 
+import Header from '../components/header'
 import Layout from '../components/layout'
 
 const ArticleTemplate = ({ data }) => {
-  const { title, sections, headerImage } = data.strapiArticle
+  const { title, sections, headerImage, lead } = data.strapiArticle
 
   return (
     <Layout>
-      <header>
-        <h1>{title}</h1>
-        {/* <p className="lead">{lead}</p> */}
-        {headerImage && (
-          <div className="title-image">
-            <Parallax y={[-50, 50]}>
-              <Img fluid={headerImage.childImageSharp.fluid} />
-            </Parallax>
-          </div>
-        )}
-        <div className="overlay"></div>
-      </header>
+      <Header title={title} lead={lead} titleImage={headerImage} />
+
       <main>
         {sections.map((section, i) => (
           <div className={section.className || ''} key={`section-${i}`}>
@@ -41,6 +30,7 @@ export const query = graphql`
     strapiArticle(id: { eq: $id }) {
       title
       slug
+      lead
       headerImage {
         childImageSharp {
           fluid(maxWidth: 1920) {
