@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-import Header from './header'
+import Nav from './nav'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header
+      <Nav
         siteTitle={data.site.siteMetadata.title}
         categories={data.allStrapiCategory.edges.map(item => item.node)}
       />

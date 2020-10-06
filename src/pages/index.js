@@ -13,10 +13,10 @@ const IndexPage = ({ data }) => {
     <Layout>
       <header>
         <h1>{title}</h1>
-        <p className="lead">{lead}</p>
+        <p>{lead}</p>
         {titleImage && (
           <div className="title-image">
-            <Parallax y={[-40, 40]}>
+            <Parallax y={[-50, 50]}>
               <Img fluid={titleImage.childImageSharp.fluid} />
             </Parallax>
           </div>

@@ -7,8 +7,6 @@ import { Parallax } from 'react-scroll-parallax'
 import Layout from '../components/layout'
 
 const ArticleTemplate = ({ data }) => {
-  console.log(data)
-
   const { title, sections, headerImage } = data.strapiArticle
 
   return (
@@ -18,7 +16,7 @@ const ArticleTemplate = ({ data }) => {
         {/* <p className="lead">{lead}</p> */}
         {headerImage && (
           <div className="title-image">
-            <Parallax y={[-40, 40]}>
+            <Parallax y={[-50, 50]}>
               <Img fluid={headerImage.childImageSharp.fluid} />
             </Parallax>
           </div>
