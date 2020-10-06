@@ -1,3 +1,5 @@
+import './header.scss'
+
 import Img from 'gatsby-image'
 import React from 'react'
 import { Parallax } from 'react-scroll-parallax'
