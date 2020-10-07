@@ -107,15 +107,13 @@ main {
   }
 }
 
-.pros {
-  padding-right: 2rem;
-}
-
 .pros ul li {
+  color: $success-color;
   background-image: url(../images/plus.png);
 }
 
 .cons ul li {
+  color: $danger-color;
   background-image: url(../images/minus.png);
 }
 
@@ -125,34 +123,12 @@ main {
   vertical-align: top;
 }
 
-.fine {
-  font-size: 0.8rem;
-  color: gray;
-  font-style: italic;
-}
-
-.navbar li {
-  margin-bottom: 0;
-}
-
 .images-left {
   img {
     float: left;
     margin-right: 1rem;
     margin-bottom: 0;
   }
-}
-
-.image-shadow {
-  img {
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 2px #666;
-  }
-}
-
-.alert {
-  border-style: outset;
-  border-width: 2px;
 }
 
 .filters {
