@@ -124,6 +124,11 @@ main {
   display: inline-block;
   width: 50%;
   vertical-align: top;
+
+  @media screen and (max-width: $content-width) {
+    display: block;
+    width: 100%;
+  }
 }
 
 .images-left {
