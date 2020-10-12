@@ -2,7 +2,7 @@
   "name": "dragon-utopia",
   "private": true,
   "description": "A static react library of HoMM3 knowledge",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Dan Atanasov <danmanm@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.18",

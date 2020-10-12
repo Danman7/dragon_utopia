@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Dragon Utopia',
+    title: 'The Dragon Utopia',
     description: 'A static react library of HoMM3 knowledge',
     author: 'Dan Atanasov'
   },
@@ -30,10 +30,10 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#e68a49',
+        theme_color: '#e68a49',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
+        icon: 'src/images/dragon-icon.png' // This path is relative to the root of the site.
       }
     },
     'gatsby-plugin-offline',
