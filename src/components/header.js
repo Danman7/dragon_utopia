@@ -11,7 +11,7 @@ const Header = ({ title, lead, titleImage }) => {
       <h1>{title}</h1>
       <p>{lead}</p>
       <div className="title-image">
-        <Parallax y={[-50, 50]}>
+        <Parallax y={[-20, 50]}>
           <Img fluid={titleImage.childImageSharp.fluid} />
         </Parallax>
       </div>

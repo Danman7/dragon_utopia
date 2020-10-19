@@ -9,26 +9,16 @@ export default ({ onSearch }) => {
         e.preventDefault()
         onSearch(search)
       }}
+      className="searchbar"
     >
-      <div className="input-group mb-3">
-        <div className="input-group-prepend">
-          <button
-            className="btn btn-secondary"
-            type="button"
-            id="button-addon1"
-            onClick={e => onSearch(search)}
-          >
-            Search
-          </button>
-        </div>
-        <input
-          className="form-control"
-          id="global-search"
-          value={search || ''}
-          onChange={e => setSearch(e.target.value)}
-          placeholder="Type anything and hit Enter..."
-        />
-      </div>
+      <input
+        id="global-search"
+        type="text"
+        value={search || ''}
+        onChange={e => setSearch(e.target.value)}
+        placeholder="Type any search criteria..."
+      />
+      <input type="submit" value="Search for creature" />
     </form>
   )
 }

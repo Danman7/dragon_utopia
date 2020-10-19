@@ -3,7 +3,7 @@
 header {
   position: relative;
   overflow: hidden;
-
+  box-shadow: 0 0 0.3em #333;
   padding: 10vw 2em;
   text-align: center;
   color: white;
@@ -16,7 +16,7 @@ header {
   p {
     margin: 0 auto;
     max-width: $content-width;
-    text-shadow: 2px 2px 2px $title-color;
+    text-shadow: 2px 2px 2px $text-color;
   }
 
   h1 {

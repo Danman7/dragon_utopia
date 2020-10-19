@@ -35,44 +35,42 @@ export default ({ column }) => {
   }, [])
 
   return (
-    <div>
+    <div className="checkbox-group">
       <div>
         <strong>{column.Header}</strong>
       </div>
-      {allOptions.map(level => (
-        <div
-          key={`level-checkbox-${level}`}
-          style={{ display: 'inline-block', marginRight: 5 }}
-        >
-          <label htmlFor={`level-${level}`}>
-            <input
-              id={`level-${level}`}
-              type="checkbox"
-              checked={filterValue ? filterValue.includes(level) : true}
-              value={level}
-              onChange={setCheckboxFilter}
-            />{' '}
-            {level}
-          </label>{' '}
-        </div>
-      ))}
+      <div className="checkbox-items">
+        {allOptions.map(level => (
+          <div key={`level-checkbox-${level}`} className="checkbox-item">
+            <label htmlFor={`level-${level}`} className="checkbox-container">
+              {level}
+              <input
+                id={`level-${level}`}
+                type="checkbox"
+                checked={filterValue ? filterValue.includes(level) : true}
+                value={level}
+                onChange={setCheckboxFilter}
+              />
+              <span className="checkmark"></span>
+            </label>
+          </div>
+        ))}
+      </div>
       <div>
-        <div className="btn-group" role="group">
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={() => setFilter([])}
-          >
-            None
-          </button>
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={() => setFilter(allOptions)}
-          >
-            All
-          </button>
-        </div>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => setFilter([])}
+        >
+          None
+        </button>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => setFilter(allOptions)}
+        >
+          All
+        </button>
       </div>
     </div>
   )

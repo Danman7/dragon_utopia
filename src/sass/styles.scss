@@ -19,18 +19,12 @@ html {
 // General
 body {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  background: url(../images/background.jpg);
+  background: url(../images/background.png) $background-color;
   font-family: 'Roboto Slab', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.5;
   color: $text-color;
   margin: 0;
   padding: 0;
-}
-
-h1,
-h2,
-strong {
-  color: $title-color;
 }
 
 h1 {
@@ -72,15 +66,121 @@ ul {
 
 main {
   @extend .container;
-  padding: 4em 1em;
+  padding: 1em;
 
   img {
     max-width: 100%;
-    border-radius: 0.5rem;
+    margin: 1em 0;
   }
 
   @media screen and (max-width: $content-width) {
     padding: 1em;
+  }
+}
+
+button,
+input {
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0;
+  font-family: 'Roboto Slab', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+input[type='text'] {
+  border: 1px solid $text-color;
+
+  &:focus {
+    border-color: $primary-color;
+  }
+}
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+  background: $primary-color;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background: lighten($primary-color, 10%);
+  }
+
+  &:active {
+    background: darken($primary-color, 10%);
+  }
+}
+
+// Checkbox
+
+.checkbox-group {
+  margin: 1rem 0;
+
+  button {
+    margin-right: 1em;
+  }
+
+  .checkbox-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5em;
+
+    .checkbox-item {
+      margin-right: 1rem;
+
+      .checkbox-container {
+        display: block;
+        position: relative;
+        padding-left: 1.5em;
+        cursor: pointer;
+        user-select: none;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+          margin-left: 1em;
+        }
+
+        .checkmark {
+          position: absolute;
+          top: 0.2em;
+          left: 0;
+          height: 1em;
+          width: 1em;
+          background-color: #eee;
+
+          &:after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 0.4em;
+            top: 0.1em;
+            width: 0.3em;
+            height: 0.7em;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+
+        .checkmark &:hover input ~ .checkmark {
+          background-color: #ccc;
+        }
+
+        input:checked ~ .checkmark {
+          background-color: $primary-color;
+        }
+
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+      }
+    }
   }
 }
 
@@ -128,23 +228,5 @@ main {
   @media screen and (max-width: $content-width) {
     display: block;
     width: 100%;
-  }
-}
-
-.images-left {
-  img {
-    float: left;
-    margin-right: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-.filters {
-  display: flex;
-  > div {
-    margin-right: 1rem;
-  }
-  label {
-    margin-bottom: 0;
   }
 }

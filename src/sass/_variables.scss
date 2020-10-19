@@ -2,18 +2,16 @@ $primary-color: #e68a49;
 $secondary-color: #4980e6;
 $success-color: #18c930;
 $danger-color: #e13840;
-$text-color: #555;
+$background-color: #fff9f9;
+$text-color: #322;
 $light-color: #888;
-$title-color: #333;
 
 $content-width: 50em;
+
 $min_width: 320px;
 $max_width: 1200px;
 $min_font: 16px;
 $max_font: 18px;
-
-$phone: 640px;
-$desktop: 1200px;
 
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);

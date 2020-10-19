@@ -1,13 +1,40 @@
+.searchbar {
+  display: flex;
+  width: 100%;
+
+  > input[type='text'] {
+    flex-grow: 2;
+  }
+}
+
+.table-wrapper {
+  padding: 0 1rem 2rem;
+  width: 100%;
+}
+
 .compare-table {
   margin-top: 1rem;
-  font-size: 0.8rem;
+  width: 100%;
+
+  th,
+  td {
+    white-space: nowrap;
+    padding: 0 0.5rem;
+  }
 
   th {
+    text-align: left;
     background: #f1f1f1;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 2;
+  }
+
+  tfoot {
+    td {
+      border-top: 1px solid #000;
+    }
   }
 
   img {
