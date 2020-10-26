@@ -4,7 +4,6 @@ import '../game-icons.css'
 import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Nav from './nav'
 
@@ -40,9 +39,7 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata.title}
         categories={data.allStrapiCategory.edges.map(item => item.node)}
       />
-      <ParallaxProvider>
-        <div>{children}</div>
-      </ParallaxProvider>
+      <div>{children}</div>
     </>
   )
 }

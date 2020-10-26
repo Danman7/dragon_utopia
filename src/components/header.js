@@ -1,20 +1,19 @@
 import './header.scss'
 
-import Img from 'gatsby-image'
 import React from 'react'
-import { Parallax } from 'react-scroll-parallax'
 
 const Header = ({ title, lead, titleImage }) => {
-  console.log(titleImage)
+  console.log(titleImage.childImageSharp.fluid.src)
   return (
     <header>
       <h1>{title}</h1>
       <p>{lead}</p>
-      <div className="title-image">
-        <Parallax y={[-20, 50]}>
-          <Img fluid={titleImage.childImageSharp.fluid} />
-        </Parallax>
-      </div>
+      <div
+        className="title-image"
+        style={{
+          background: `url(${titleImage.childImageSharp.fluid.src}) no-repeat center`
+        }}
+      ></div>
       <div className="overlay"></div>
     </header>
   )
