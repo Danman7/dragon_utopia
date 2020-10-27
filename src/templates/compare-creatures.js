@@ -225,7 +225,7 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
 
   return (
     <Layout>
-      <main>
+      <article>
         <h1>{title}</h1>
         <ReactMarkdown source={description} />
 
@@ -245,7 +245,7 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
         </div>
 
         <p className="fine">Displaying {rows.length} results:</p>
-      </main>
+      </article>
 
       {/* Table */}
 

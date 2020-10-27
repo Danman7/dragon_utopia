@@ -12,13 +12,13 @@ const ArticleTemplate = ({ data }) => {
     <Layout>
       <Header title={title} lead={lead} titleImage={headerImage} />
 
-      <main>
+      <article>
         {sections.map((section, i) => (
           <div className={section.className || ''} key={`section-${i}`}>
             <ReactMarkdown source={section.content} />
           </div>
         ))}
-      </main>
+      </article>
     </Layout>
   )
 }

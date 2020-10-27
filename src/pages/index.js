@@ -11,9 +11,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Header title={title} lead={lead} titleImage={titleImage} />
-      <main>
+      <article>
         <ReactMarkdown source={content} />
-      </main>
+      </article>
     </Layout>
   )
 }

@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata.title}
         categories={data.allStrapiCategory.edges.map(item => item.node)}
       />
-      <div>{children}</div>
+      <main>{children}</main>
     </>
   )
 }

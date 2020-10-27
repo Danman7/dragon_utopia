@@ -33,7 +33,13 @@ h1 {
 
 h2 {
   margin-top: 1em;
-  padding-top: 1em;
+  padding: 1em;
+  border-bottom: 1px solid scale-color($text-color, $alpha: -70%);
+}
+
+p,
+.info {
+  margin: 2rem 0;
 }
 
 a {
@@ -65,16 +71,18 @@ ul {
 }
 
 main {
-  @extend .container;
-  padding: 1em;
-
   img {
     max-width: 100%;
     margin: 1em 0;
   }
+}
+
+article {
+  @extend .container;
+  padding: 4em 1em;
 
   @media screen and (max-width: $content-width) {
-    padding: 1em;
+    padding: 2em 1em;
   }
 }
 
@@ -187,7 +195,6 @@ input[type='submit'] {
 // Sections
 
 .info {
-  margin: 1rem 0;
   display: flex;
   padding: 0 1rem;
   border-left: 3px solid $secondary-color;
@@ -228,5 +235,6 @@ input[type='submit'] {
   @media screen and (max-width: $content-width) {
     display: block;
     width: 100%;
+    margin-bottom: 2rem;
   }
 }
