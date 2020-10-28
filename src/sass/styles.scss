@@ -18,7 +18,7 @@ html {
 
 // General
 body {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  font-size: 18px;
   background: url(../images/background.png) $background-color;
   font-family: 'Roboto Slab', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.5;
@@ -51,13 +51,27 @@ a {
   }
 }
 
+ol,
+ul {
+  > li {
+    margin-bottom: 0.5em;
+  }
+
+  ul,
+  ol {
+    li {
+      margin-bottom: auto;
+    }
+  }
+}
+
 ul {
   list-style-position: inside;
   margin: 0;
   padding: 0;
 
-  li {
-    margin-bottom: 0.2rem;
+  ul {
+    padding: 0 1.5em;
   }
 }
 
@@ -70,19 +84,22 @@ ul {
   max-width: $content-width;
 }
 
-main {
-  img {
-    max-width: 100%;
-    margin: 1em 0;
-  }
-}
-
 article {
   @extend .container;
   padding: 4em 1em;
 
   @media screen and (max-width: $content-width) {
     padding: 2em 1em;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .image-description {
+    font-size: 0.85em;
+    color: $secondary-color;
+    font-style: italic;
   }
 }
 
@@ -194,12 +211,12 @@ input[type='submit'] {
 
 // Sections
 
+.example {
+  @include alert($primary-color);
+}
+
 .info {
-  display: flex;
-  padding: 0 1rem;
-  border-left: 3px solid $secondary-color;
-  color: $light-color;
-  background: lighten($secondary-color, 35%);
+  @include alert($secondary-color);
 }
 
 .pros,

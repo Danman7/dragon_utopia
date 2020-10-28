@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
@@ -15,7 +16,23 @@ const ArticleTemplate = ({ data }) => {
       <article>
         {sections.map((section, i) => (
           <div className={section.className || ''} key={`section-${i}`}>
-            <ReactMarkdown source={section.content} />
+            <ReactMarkdown
+              source={section.content}
+              renderers={{
+                image: ({ src, alt, title }) => {
+                  return (
+                    <>
+                      <a href={src}>
+                        <img src={src} alt={alt} />
+                      </a>
+                      {title && (
+                        <div className="image-description">{title}</div>
+                      )}
+                    </>
+                  )
+                }
+              }}
+            />
           </div>
         ))}
       </article>

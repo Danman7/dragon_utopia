@@ -8,7 +8,7 @@ const MenuLinks = ({ categories }) => (
   <>
     {categories.map(category => (
       <div className="dropdown-toggle" key={category.id}>
-        {category.name}
+        <div className="category-name">{category.name}</div>
 
         <div className="dropdown-menu">
           {category.articles.map(article => (
