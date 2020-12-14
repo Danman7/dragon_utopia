@@ -1,10 +1,9 @@
-import { graphql } from 'gatsby'
+import Header from '../components/header'
 import Img from 'gatsby-image'
+import Layout from '../components/layout'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-
-import Header from '../components/header'
-import Layout from '../components/layout'
+import { graphql } from 'gatsby'
 
 const ArticleTemplate = ({ data }) => {
   const { title, sections, headerImage, lead } = data.strapiArticle
@@ -25,12 +24,10 @@ const ArticleTemplate = ({ data }) => {
                       <a href={src}>
                         <img src={src} alt={alt} />
                       </a>
-                      {title && (
-                        <div className="image-description">{title}</div>
-                      )}
+                      {title && <small>{title}</small>}
                     </>
                   )
-                }
+                },
               }}
             />
           </div>

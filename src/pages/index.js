@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
                   <a href={src}>
                     <img src={src} alt={alt} />
                   </a>
-                  {title && <div className="image-description">{title}</div>}
+                  {title && <small>{title}</small>}
                 </>
               )
             },

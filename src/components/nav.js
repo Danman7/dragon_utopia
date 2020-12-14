@@ -1,21 +1,23 @@
 import './nav.scss'
 
+import React, { useState } from 'react'
+
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React, { useState } from 'react'
 
 const MenuLinks = ({ categories }) => (
   <>
-    {categories.map(category => (
+    {categories.map((category) => (
       <div className="dropdown-toggle" key={category.id}>
-        <div className="category-name">{category.name}</div>
+        <div className="lead">{category.name}</div>
 
         <div className="dropdown-menu">
-          {category.articles.map(article => (
+          {category.articles.map((article) => (
             <Link
               className="dropdown-item"
               to={`/${article.slug}`}
               key={article.id}
+              activeClassName="active"
             >
               {article.title}
             </Link>
@@ -24,7 +26,9 @@ const MenuLinks = ({ categories }) => (
       </div>
     ))}
 
-    <Link to="/compare-creatures">Compare Creatures</Link>
+    <Link className="lead" to="/compare-creatures">
+      Compare Creatures
+    </Link>
   </>
 )
 
@@ -34,9 +38,11 @@ const Nav = ({ siteTitle, categories }) => {
   return (
     <>
       <nav>
-        <Link className="brand" to="/">
-          <i className="game-icon game-icon-spiked-dragon-head"></i>
-          {siteTitle}
+        <Link to="/">
+          <h4>
+            <i className="game-icon game-icon-spiked-dragon-head"></i>
+            {siteTitle}
+          </h4>
         </Link>
 
         <div className="menu-links">
@@ -62,11 +68,11 @@ const Nav = ({ siteTitle, categories }) => {
 }
 
 Nav.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 }
 
 Nav.defaultProps = {
-  siteTitle: ``
+  siteTitle: ``,
 }
 
 export default Nav

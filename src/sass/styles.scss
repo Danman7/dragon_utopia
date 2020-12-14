@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-  padding: 0 0 1rem 1rem;
+  padding: 0 1rem 1rem 1rem;
   border-bottom: 1px solid $text-color;
   font-size: 2.441rem;
 }
@@ -73,13 +73,14 @@ a {
 
   &:hover {
     text-decoration: underline;
+    text-decoration-color: $primary-color;
   }
 }
 
 ol,
 ul {
   > li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
   }
 
   ul,
@@ -112,10 +113,6 @@ ul {
 article {
   @extend .container;
   padding: 4em 1em;
-
-  @media screen and (max-width: $content-width) {
-    padding: 2em 1em;
-  }
 
   img {
     max-width: 100%;
@@ -237,11 +234,11 @@ input[type='submit'] {
 // Sections
 
 .example {
-  @include alert($primary-color);
+  @include alert($secondary-color);
 }
 
 .info {
-  @include alert($secondary-color);
+  @include alert($primary-color);
 }
 
 .pros,
@@ -252,11 +249,15 @@ input[type='submit'] {
 
     li {
       padding-left: 2rem;
-      background-position: 0 0.3rem;
+      background-position: 0 0.4rem;
       background-size: 1rem;
       background-repeat: no-repeat;
     }
   }
+}
+
+.pros {
+  padding-right: 1rem;
 }
 
 .pros ul li {
@@ -278,5 +279,43 @@ input[type='submit'] {
     display: block;
     width: 100%;
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: $content-width) {
+  h1 {
+    font-size: 1.802rem;
+  }
+
+  h2 {
+    padding: 0.5rem;
+    font-size: 1.602rem;
+  }
+
+  h3 {
+    font-size: 1.424rem;
+  }
+
+  h4 {
+    font-size: 1.266rem;
+  }
+
+  .lead {
+    font-size: 1.125rem;
+  }
+
+  small {
+    font-size: 0.889rem;
+  }
+
+  article {
+    padding: 1em;
+  }
+
+  ol,
+  ul {
+    > li {
+      margin-bottom: 0;
+    }
   }
 }
