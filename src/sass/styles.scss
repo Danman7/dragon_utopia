@@ -45,13 +45,12 @@ h6 {
 }
 
 h1 {
-  margin-top: 0;
   font-size: 3.052rem;
 }
 
 h2 {
-  padding: 0 1rem 1rem 1rem;
-  border-bottom: 1px solid $text-color;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba($text-color, 0.4);
   font-size: 2.441rem;
 }
 
@@ -77,20 +76,6 @@ a {
   }
 }
 
-ol,
-ul {
-  > li {
-    margin-bottom: 0.4em;
-  }
-
-  ul,
-  ol {
-    li {
-      margin-bottom: auto;
-    }
-  }
-}
-
 ul {
   list-style-position: inside;
   margin: 0;
@@ -112,7 +97,7 @@ ul {
 
 article {
   @extend .container;
-  padding: 4em 1em;
+  padding: 3rem 1rem;
 
   img {
     max-width: 100%;
@@ -288,7 +273,7 @@ input[type='submit'] {
   }
 
   h2 {
-    padding: 0.5rem;
+    padding: 0.2rem;
     font-size: 1.602rem;
   }
 
@@ -310,12 +295,5 @@ input[type='submit'] {
 
   article {
     padding: 1em;
-  }
-
-  ol,
-  ul {
-    > li {
-      margin-bottom: 0;
-    }
   }
 }
