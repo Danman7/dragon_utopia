@@ -1,9 +1,8 @@
-import { graphql } from 'gatsby'
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
-
 import Header from '../components/header'
 import Layout from '../components/layout'
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
+import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => {
   const { title, lead, content, titleImage } = data.strapiHome
@@ -12,7 +11,21 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Header title={title} lead={lead} titleImage={titleImage} />
       <article>
-        <ReactMarkdown source={content} />
+        <ReactMarkdown
+          source={content}
+          renderers={{
+            image: ({ src, alt, title }) => {
+              return (
+                <>
+                  <a href={src}>
+                    <img src={src} alt={alt} />
+                  </a>
+                  {title && <div className="image-description">{title}</div>}
+                </>
+              )
+            },
+          }}
+        />
       </article>
     </Layout>
   )

@@ -12,7 +12,7 @@ const Header = ({ title, lead, titleImage }) => {
         fluid={titleImage.childImageSharp.fluid}
       >
         <h1>{title}</h1>
-        <p>{lead}</p>
+        <p className="lead">{lead}</p>
         <div className="overlay"></div>
       </BackgroundImage>
     </header>

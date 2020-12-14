@@ -18,28 +18,53 @@ html {
 
 // General
 body {
-  font-size: 18px;
-  background: url(../images/background.png) $background-color;
+  font-size: 16px;
+  background: $background-color;
   font-family: 'Roboto Slab', 'Helvetica', 'Arial', sans-serif;
-  line-height: 1.5;
+  line-height: 1.75;
   color: $text-color;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.25;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  padding-bottom: 1em;
+  margin-top: 0;
+  font-size: 3.052rem;
 }
 
 h2 {
-  margin-top: 1em;
-  padding: 1em;
-  border-bottom: 1px solid scale-color($text-color, $alpha: -70%);
+  padding: 0 0 1rem 1rem;
+  border-bottom: 1px solid $text-color;
+  font-size: 2.441rem;
 }
 
-p,
-.info {
-  margin: 2rem 0;
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+small {
+  font-size: 0.8rem;
 }
 
 a {
@@ -76,7 +101,7 @@ ul {
 }
 
 .lead {
-  font-size: 1.2em;
+  font-size: 1.25rem;
 }
 
 .container {
