@@ -1,7 +1,7 @@
 $primary-color: #e68a49;
 $secondary-color: #47a4e6;
-$success-color: darken(#47e689, 20);
-$danger-color: #e6476f;
+$success-color: #50bf60;
+$danger-color: #f23720;
 $background-color: #fff9f9;
 $text-color: rgba(#322, 0.9);
 $light-color: #888;
@@ -11,7 +11,7 @@ $content-width: 50em;
 @mixin alert($color: $primary-color) {
   margin: 1rem 0;
   display: flex;
-  padding: 0 1rem;
+  padding-left: 1rem;
   border-left: 3px solid $color;
   color: $color;
 }
