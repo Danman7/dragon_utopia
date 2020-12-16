@@ -1,32 +1,33 @@
 import './compare-creatures.scss'
 
-import { graphql } from 'gatsby'
 import React, { useEffect, useMemo } from 'react'
-import ReactMarkdown from 'react-markdown'
 import { useFilters, useGlobalFilter, useSortBy, useTable } from 'react-table'
 
 import CheckboxFilter from '../components/filters/CheckboxFilter'
-import Search from '../components/filters/Search'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
-import spriteLocations from '../data/spritelocations.json'
+import ReactMarkdown from 'react-markdown'
+import Search from '../components/filters/Search'
 import creatures from '../data/units.json'
 import crystal from '../images/crystal.png'
 import flying from '../images/flying.png'
 import gem from '../images/gem.png'
 import gold from '../images/gold.png'
+import { graphql } from 'gatsby'
 import mercury from '../images/mercury.png'
 import shooter from '../images/shooter.png'
+import spriteLocations from '../data/spritelocations.json'
 import sulfur from '../images/sulfur.png'
 
 const resourceImgs = {
   gem,
   mercury,
   crystal,
-  sulfur
+  sulfur,
 }
 
 const checkboxFilter = (rows, id, filterValue) => {
-  return rows.filter(row => {
+  return rows.filter((row) => {
     const rowValue = row.values[id]
 
     return filterValue.includes(rowValue)
@@ -43,25 +44,25 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
       {
         Header: 'Creature',
         accessor: 'name',
-        Footer: info => {
+        Footer: (info) => {
           return <>Average:</>
-        }
+        },
       },
       { Header: 'Town', accessor: 'town', filter: checkboxFilter },
       {
         Header: 'Lvl',
         accessor: 'level',
-        filter: checkboxFilter
+        filter: checkboxFilter,
       },
       {
         Header: 'Upgrade',
         accessor: 'upgrade',
-        filter: checkboxFilter
+        filter: checkboxFilter,
       },
       {
         Header: 'Cost',
         accessor: 'cost',
-        Footer: info => {
+        Footer: (info) => {
           const average = React.useMemo(
             () =>
               Math.round(
@@ -77,12 +78,12 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
               {average}
             </>
           )
-        }
+        },
       },
       {
         Header: 'P/Week',
         accessor: 'population',
-        Footer: info => {
+        Footer: (info) => {
           const average = React.useMemo(
             () =>
               Math.round(
@@ -93,12 +94,12 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
           )
 
           return <>{average}</>
-        }
+        },
       },
       {
         Header: 'HP',
         accessor: 'health',
-        Footer: info => {
+        Footer: (info) => {
           const average = React.useMemo(
             () =>
               Math.round(
@@ -109,12 +110,12 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
           )
 
           return <>{average}</>
-        }
+        },
       },
       {
         Header: 'Att',
         accessor: 'attack',
-        Footer: info => {
+        Footer: (info) => {
           const average = React.useMemo(
             () =>
               Math.round(
@@ -125,12 +126,12 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
           )
 
           return <>{average}</>
-        }
+        },
       },
       {
         Header: 'Def',
         accessor: 'defense',
-        Footer: info => {
+        Footer: (info) => {
           const average = React.useMemo(
             () =>
               Math.round(
@@ -141,12 +142,12 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
           )
 
           return <>{average}</>
-        }
+        },
       },
       {
         Header: 'Dmg',
         accessor: 'maxDamage',
-        Footer: info => {
+        Footer: (info) => {
           const minAverage = React.useMemo(
             () =>
               Math.round(
@@ -172,12 +173,12 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
               {minAverage}-{maxAverage}
             </>
           )
-        }
+        },
       },
       {
         Header: 'Spd',
         accessor: 'speed',
-        Footer: info => {
+        Footer: (info) => {
           const average = React.useMemo(
             () =>
               Math.round(
@@ -188,14 +189,14 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
           )
 
           return <>{average}</>
-        }
+        },
       },
-      { Header: 'Specials', accessor: 'specials' }
+      { Header: 'Specials', accessor: 'specials' },
     ],
     []
   )
 
-  const onSearch = value => {
+  const onSearch = (value) => {
     setGlobalFilter(value)
   }
 
@@ -207,11 +208,11 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
     rows,
     prepareRow,
     footerGroups,
-    setGlobalFilter
+    setGlobalFilter,
   } = useTable(
     {
       columns: defaultColumns,
-      data: creaturesData
+      data: creaturesData,
     },
     useFilters,
     useGlobalFilter,
@@ -219,12 +220,16 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
   )
 
   useEffect(() => {
-    columns.find(column => column.id === 'upgrade').toggleHidden()
-    columns.find(column => column.id === 'town').toggleHidden()
+    columns.find((column) => column.id === 'upgrade').toggleHidden()
+    columns.find((column) => column.id === 'town').toggleHidden()
   }, [])
 
   return (
     <Layout>
+      <Helmet>
+        <title>The Dragon Utopia | Creature Compare</title>
+      </Helmet>
+
       <article>
         <h1>{title}</h1>
         <ReactMarkdown source={description} />
@@ -234,13 +239,13 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
 
         <div className="filters">
           <CheckboxFilter
-            column={columns.find(column => column.id === 'level')}
+            column={columns.find((column) => column.id === 'level')}
           />
           <CheckboxFilter
-            column={columns.find(column => column.id === 'town')}
+            column={columns.find((column) => column.id === 'town')}
           />
           <CheckboxFilter
-            column={columns.find(column => column.id === 'upgrade')}
+            column={columns.find((column) => column.id === 'upgrade')}
           />
         </div>
 
@@ -252,9 +257,9 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
       <div className="table-wrapper">
         <table {...getTableProps()} className="compare-table">
           <thead>
-            {headerGroups.map(headerGroup => (
+            {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map(column => (
+                {headerGroup.headers.map((column) => (
                   <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                     {column.render('Header')}
                     <span>
@@ -270,20 +275,20 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
             ))}
           </thead>
           <tbody {...getTableBodyProps()}>
-            {rows.map(row => {
+            {rows.map((row) => {
               prepareRow(row)
 
               return (
                 <tr {...row.getRowProps()} className={`${row.original.town}`}>
-                  {row.cells.map(cell => {
+                  {row.cells.map((cell) => {
                     const ratings =
                       typeof cell.value === 'number' &&
                       cell.column.id !== 'level'
-                        ? rows.map(row => row.values[cell.column.id])
+                        ? rows.map((row) => row.values[cell.column.id])
                         : false
 
                     const spriteLocation = spriteLocations.find(
-                      item => item.name === cell.value
+                      (item) => item.name === cell.value
                     )
 
                     // Cell render
@@ -302,7 +307,7 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
                           <div
                             className="creature"
                             style={{
-                              backgroundPosition: spriteLocation.position
+                              backgroundPosition: spriteLocation.position,
                             }}
                           ></div>
                         )}
@@ -333,7 +338,7 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
                           cell.row.original.extraCost && (
                             <div
                               style={{
-                                display: 'inline-block'
+                                display: 'inline-block',
                               }}
                             >
                               {' '}
@@ -385,9 +390,9 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
             })}
           </tbody>
           <tfoot>
-            {footerGroups.map(group => (
+            {footerGroups.map((group) => (
               <tr {...group.getFooterGroupProps()}>
-                {group.headers.map(column => (
+                {group.headers.map((column) => (
                   <td {...column.getFooterProps()}>
                     {column.render('Footer')}
                   </td>

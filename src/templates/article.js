@@ -1,4 +1,5 @@
 import Header from '../components/header'
+import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import React from 'react'
@@ -10,6 +11,10 @@ const ArticleTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>The Dragon Utopia | {title}</title>
+      </Helmet>
+
       <Header title={title} lead={lead} titleImage={headerImage} />
 
       <article>

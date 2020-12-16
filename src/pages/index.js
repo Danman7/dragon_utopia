@@ -1,4 +1,5 @@
 import Header from '../components/header'
+import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
@@ -9,6 +10,9 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>The Dragon Utopia</title>
+      </Helmet>
       <Header title={title} lead={lead} titleImage={titleImage} />
       <article>
         <ReactMarkdown
