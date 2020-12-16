@@ -1,10 +1,10 @@
-import Header from '../components/header'
-import { Helmet } from 'react-helmet'
-import Img from 'gatsby-image'
-import Layout from '../components/layout'
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
 import { graphql } from 'gatsby'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import ReactMarkdown from 'react-markdown'
+
+import Header from '../components/header'
+import Layout from '../components/layout'
 
 const ArticleTemplate = ({ data }) => {
   const { title, sections, headerImage, lead } = data.strapiArticle

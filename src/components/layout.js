@@ -11,7 +11,9 @@ const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       allStrapiCategory(
-        filter: { name: { in: ["Towns", "Heroes", "Guides", "Matchups"] } }
+        filter: {
+          name: { in: ["Towns", "Creatures", "Heroes", "Guides", "Matchups"] }
+        }
       ) {
         edges {
           node {
@@ -37,7 +39,7 @@ const Layout = ({ children }) => {
     <>
       <Nav
         siteTitle={data.site.siteMetadata.title}
-        categories={data.allStrapiCategory.edges.map(item => item.node)}
+        categories={data.allStrapiCategory.edges.map((item) => item.node)}
       />
       <main>{children}</main>
     </>
@@ -45,7 +47,7 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

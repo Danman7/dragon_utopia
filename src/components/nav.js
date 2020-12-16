@@ -1,18 +1,41 @@
 import './nav.scss'
 
-import React, { useState } from 'react'
-
+import { motion } from 'framer-motion'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
-const MenuLinks = ({ categories }) => (
+const slashMotion = {
+  rest: {
+    display: 'none',
+    left: 20,
+    opacity: 0,
+  },
+  hover: {
+    display: 'block',
+    opacity: 1,
+    left: -10,
+    transition: {
+      type: 'spring',
+      stiffness: 260,
+      damping: 20,
+    },
+  },
+}
+
+const MenuLinks = ({ categories, isMobile }) => (
   <>
     {categories.map((category) => (
-      <div className="dropdown-toggle" key={category.id}>
+      <motion.div
+        className="dropdown-toggle"
+        key={category.id}
+        initial={isMobile ? undefined : 'rest'}
+        whileHover={isMobile ? undefined : 'hover'}
+      >
         <div className="lead">{category.name}</div>
 
-        <div className="dropdown-menu">
-          {category.articles.map((article) => (
+        <motion.div variants={slashMotion} className="dropdown-menu">
+          {category.articles.sort().map((article) => (
             <Link
               className="dropdown-item"
               to={`/${article.slug}`}
@@ -22,8 +45,8 @@ const MenuLinks = ({ categories }) => (
               {article.title}
             </Link>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     ))}
 
     <Link className="lead" to="/compare-creatures">
@@ -60,7 +83,7 @@ const Nav = ({ siteTitle, categories }) => {
 
       {mobileNavIsOpen && (
         <div className="mobile-menu">
-          <MenuLinks categories={categories} />
+          <MenuLinks categories={categories} isMobile />
         </div>
       )}
     </>
