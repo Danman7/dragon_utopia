@@ -1,0 +1,17 @@
+@import '../sass/variables';
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+  background: $primary-color;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background: lighten($primary-color, 10%);
+  }
+
+  &:active {
+    background: darken($primary-color, 10%);
+  }
+}

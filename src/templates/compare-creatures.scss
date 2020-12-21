@@ -8,8 +8,8 @@
 }
 
 .table-wrapper {
-  padding: 0 1rem 2rem;
-  width: 100%;
+  overflow: auto;
+  margin-top: -1rem;
 }
 
 .compare-table {

@@ -5,7 +5,6 @@ import BackgroundImage from 'gatsby-background-image'
 import React from 'react'
 
 const Header = ({ title, lead, titleImage }) => {
-  console.log(titleImage.childImageSharp.fluid.src)
   return (
     <header>
       <BackgroundImage
@@ -16,7 +15,9 @@ const Header = ({ title, lead, titleImage }) => {
         <motion.hr
           animate={{
             width: ['0em', '50em'],
+            opacity: [0, 1],
           }}
+          transition={{ duration: 1 }}
         />
         <p className="lead">{lead}</p>
         <div className="overlay"></div>

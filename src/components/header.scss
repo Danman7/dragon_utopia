@@ -10,6 +10,7 @@ header {
   .lead {
     margin: 0 auto;
     max-width: $content-width;
+    transform-origin: center center;
   }
 
   h1 {

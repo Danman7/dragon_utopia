@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 
-export default ({ onSearch }) => {
+import Button from '../button'
+
+const Search = ({ onSearch }) => {
   const [search, setSearch] = useState('')
 
   return (
     <form
-      onSubmit={e => {
+      onSubmit={(e) => {
         e.preventDefault()
         onSearch(search)
       }}
@@ -15,10 +17,12 @@ export default ({ onSearch }) => {
         id="global-search"
         type="text"
         value={search || ''}
-        onChange={e => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
         placeholder="Type any search criteria..."
       />
-      <input type="submit" value="Search for creature" />
+      <Button isSubmit>Search for creature</Button>
     </form>
   )
 }
+
+export default Search

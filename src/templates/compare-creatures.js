@@ -1,22 +1,20 @@
 import './compare-creatures.scss'
 
 import React, { useEffect, useMemo } from 'react'
+import { Helmet } from 'react-helmet'
 import { useFilters, useGlobalFilter, useSortBy, useTable } from 'react-table'
 
 import CheckboxFilter from '../components/filters/CheckboxFilter'
-import { Helmet } from 'react-helmet'
-import Layout from '../components/layout'
-import ReactMarkdown from 'react-markdown'
 import Search from '../components/filters/Search'
+import Layout from '../components/layout'
+import spriteLocations from '../data/spritelocations.json'
 import creatures from '../data/units.json'
 import crystal from '../images/crystal.png'
 import flying from '../images/flying.png'
 import gem from '../images/gem.png'
 import gold from '../images/gold.png'
-import { graphql } from 'gatsby'
 import mercury from '../images/mercury.png'
 import shooter from '../images/shooter.png'
-import spriteLocations from '../data/spritelocations.json'
 import sulfur from '../images/sulfur.png'
 
 const resourceImgs = {
@@ -34,9 +32,7 @@ const checkboxFilter = (rows, id, filterValue) => {
   })
 }
 
-const CompareCreaturesTemplate = React.memo(({ data }) => {
-  const { title, description } = data.strapiCompareCreatures
-
+const CompareCreaturesTemplate = React.memo(() => {
   const creaturesData = useMemo(() => creatures, [])
 
   const defaultColumns = useMemo(
@@ -44,7 +40,7 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
       {
         Header: 'Creature',
         accessor: 'name',
-        Footer: (info) => {
+        Footer: () => {
           return <>Average:</>
         },
       },
@@ -229,31 +225,27 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
       <Helmet>
         <title>The Dragon Utopia | Creature Compare</title>
       </Helmet>
+      <div className="dummy-header">
+        <article>
+          {/* Filters */}
+          <Search onSearch={onSearch} />
 
-      <article>
-        <h1>{title}</h1>
-        <ReactMarkdown source={description} />
+          <div className="filters">
+            <CheckboxFilter
+              column={columns.find((column) => column.id === 'level')}
+            />
+            <CheckboxFilter
+              column={columns.find((column) => column.id === 'town')}
+            />
+            <CheckboxFilter
+              column={columns.find((column) => column.id === 'upgrade')}
+            />
+          </div>
 
-        {/* Filters */}
-        <Search onSearch={onSearch} />
-
-        <div className="filters">
-          <CheckboxFilter
-            column={columns.find((column) => column.id === 'level')}
-          />
-          <CheckboxFilter
-            column={columns.find((column) => column.id === 'town')}
-          />
-          <CheckboxFilter
-            column={columns.find((column) => column.id === 'upgrade')}
-          />
-        </div>
-
-        <p className="fine">Displaying {rows.length} results:</p>
-      </article>
-
+          <p className="fine">Displaying {rows.length} results.</p>
+        </article>
+      </div>
       {/* Table */}
-
       <div className="table-wrapper">
         <table {...getTableProps()} className="compare-table">
           <thead>
@@ -407,12 +399,3 @@ const CompareCreaturesTemplate = React.memo(({ data }) => {
 })
 
 export default CompareCreaturesTemplate
-
-export const query = graphql`
-  query CompareCreaturesTemplate {
-    strapiCompareCreatures {
-      title
-      description
-    }
-  }
-`
