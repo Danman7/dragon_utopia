@@ -1,9 +1,9 @@
 import './nav.scss'
 
-import { motion } from 'framer-motion'
+import { motion, useCycle } from 'framer-motion'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 
 const slashMotion = {
   rest: {
@@ -55,8 +55,73 @@ const MenuLinks = ({ categories, isMobile }) => (
   </>
 )
 
+const Path = (props) => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="#fff"
+    strokeLinecap="round"
+    {...props}
+  />
+)
+
+const variants = {
+  open: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+}
+
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: 'spring',
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: 'circle(30px at 40px 40px)',
+    transition: {
+      delay: 0.5,
+      type: 'spring',
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+}
+
+export const MenuToggle = () => (
+  <svg width="23" height="23" viewBox="0 0 23 23">
+    <Path
+      variants={{
+        closed: { d: 'M 2 2.5 L 20 2.5' },
+        open: { d: 'M 3 16.5 L 17 2.5' },
+      }}
+    />
+    <Path
+      d="M 2 9.423 L 20 9.423"
+      variants={{
+        closed: { opacity: 1 },
+        open: { opacity: 0 },
+      }}
+      transition={{ duration: 0.1 }}
+    />
+    <Path
+      variants={{
+        closed: { d: 'M 2 16.346 L 20 16.346' },
+        open: { d: 'M 3 2.5 L 17 16.346' },
+      }}
+    />
+  </svg>
+)
+
 const Nav = ({ siteTitle, categories }) => {
-  const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false)
+  const [mobileNavIsOpen, toggleMobileNavIsOpen] = useCycle(false, true)
+  const containerRef = useRef(null)
 
   return (
     <>
@@ -72,13 +137,18 @@ const Nav = ({ siteTitle, categories }) => {
           <MenuLinks categories={categories} />
         </div>
 
-        <i
-          className="game-icon game-icon-hamburger-menu mobile-nav"
+        <motion.div
+          initial={false}
+          ref={containerRef}
+          animate={mobileNavIsOpen ? 'open' : 'closed'}
+          className="mobile-nav"
           role="menu"
-          onClick={() => setMobileNavIsOpen(!mobileNavIsOpen)}
-          onKeyDown={() => setMobileNavIsOpen(!mobileNavIsOpen)}
           tabIndex={0}
-        ></i>
+          onClick={() => toggleMobileNavIsOpen(!mobileNavIsOpen)}
+          onKeyDown={() => toggleMobileNavIsOpen(!mobileNavIsOpen)}
+        >
+          <MenuToggle isOpen={mobileNavIsOpen} />
+        </motion.div>
       </nav>
 
       {mobileNavIsOpen && (
