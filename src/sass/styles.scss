@@ -102,6 +102,11 @@ ul {
 article {
   @extend .container;
   padding: 3rem 1rem;
+  text-align: justify;
+
+  a {
+    color: $primary-color;
+  }
 
   img {
     max-width: 100%;
@@ -205,12 +210,12 @@ input[type='text'] {
 
 // Sections
 
-.example {
+.info {
   @include alert($secondary-color);
 }
 
-.info {
-  @include alert($primary-color);
+.description {
+  color: $secondary-color;
 }
 
 .pros,

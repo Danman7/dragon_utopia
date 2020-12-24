@@ -29,7 +29,7 @@ const ArticleTemplate = ({ data }) => {
                       <a href={src}>
                         <img src={src} alt={alt} />
                       </a>
-                      {title && <small>{title}</small>}
+                      {title && <small class="description">{title}</small>}
                     </>
                   )
                 },

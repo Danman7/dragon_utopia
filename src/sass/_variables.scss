@@ -10,7 +10,6 @@ $content-width: 50em;
 
 @mixin alert($color: $primary-color) {
   margin: 1rem 0;
-  display: flex;
   padding-left: 1rem;
   border-left: 3px solid $color;
   color: $color;
