@@ -25,8 +25,8 @@ const Section = ({ section }) => {
       animate={controls}
       initial="hidden"
       variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 300 },
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
       }}
     >
       <ReactMarkdown
