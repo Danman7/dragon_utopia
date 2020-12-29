@@ -10,7 +10,7 @@ import Layout from '../components/layout'
 
 const scrollFadeVariants = {
   visible: { opacity: 1, scale: 1 },
-  hidden: { opacity: 0, scale: 0.9 },
+  hidden: { opacity: 0, scale: 0.95 },
 }
 
 const Section = ({ section }) => {

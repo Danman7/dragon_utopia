@@ -2,6 +2,7 @@ import './nav.scss'
 
 import { motion, useCycle } from 'framer-motion'
 import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import PropTypes from 'prop-types'
 import React, { useRef } from 'react'
 
@@ -36,22 +37,24 @@ const MenuLinks = ({ categories, isMobile }) => (
 
         <motion.div variants={slashMotion} className="dropdown-menu">
           {category.articles.sort().map((article) => (
-            <Link
+            <AniLink
+              cover
+              bg="#e68a49"
               className="dropdown-item"
               to={`/${article.slug}`}
               key={article.id}
               activeClassName="active"
             >
               {article.title}
-            </Link>
+            </AniLink>
           ))}
         </motion.div>
       </motion.div>
     ))}
 
-    <Link className="lead" to="/compare-creatures">
+    <AniLink cover bg="#e68a49" className="lead" to="/compare-creatures">
       Compare Creatures
-    </Link>
+    </AniLink>
   </>
 )
 
@@ -71,26 +74,6 @@ const variants = {
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-}
-
-const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-    transition: {
-      type: 'spring',
-      stiffness: 20,
-      restDelta: 2,
-    },
-  }),
-  closed: {
-    clipPath: 'circle(30px at 40px 40px)',
-    transition: {
-      delay: 0.5,
-      type: 'spring',
-      stiffness: 400,
-      damping: 40,
-    },
   },
 }
 
@@ -126,12 +109,12 @@ const Nav = ({ siteTitle, categories }) => {
   return (
     <>
       <nav>
-        <Link to="/">
+        <AniLink cover bg="#e68a49" to="/">
           <h4>
             <i className="game-icon game-icon-spiked-dragon-head"></i>
             {siteTitle}
           </h4>
-        </Link>
+        </AniLink>
 
         <div className="menu-links">
           <MenuLinks categories={categories} />
