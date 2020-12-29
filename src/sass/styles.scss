@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import './variables';
 
 // General
@@ -18,10 +18,10 @@ html {
 
 // General
 body {
+  line-height: 1.75;
   font-size: 16px;
   background: $background-color;
-  font-family: 'Roboto Slab', 'Helvetica', 'Arial', sans-serif;
-  line-height: 1.75;
+  font-family: 'Roboto Slab', serif;
   color: $text-color;
   margin: 0;
   padding: 0;
@@ -39,9 +39,6 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  line-height: 1.25;
-  margin: 0;
-  padding: 0;
 }
 
 h1 {
@@ -49,8 +46,6 @@ h1 {
 }
 
 h2 {
-  padding: 0.5rem;
-  border-bottom: 1px solid rgba($text-color, 0.4);
   font-size: 2.441rem;
 }
 
@@ -102,7 +97,6 @@ ul {
 article {
   @extend .container;
   padding: 3rem 1rem;
-  text-align: justify;
 
   a {
     color: $primary-color;
@@ -125,7 +119,6 @@ input {
   padding: 0.5rem;
   border-radius: 0;
   font-family: 'Roboto Slab', 'Helvetica', 'Arial', sans-serif;
-  line-height: 1.5;
 }
 
 input[type='text'] {
@@ -211,7 +204,7 @@ input[type='text'] {
 // Sections
 
 .info {
-  @include alert($secondary-color);
+  @include alert($primary-color);
 }
 
 .description {

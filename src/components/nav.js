@@ -8,13 +8,13 @@ import React, { useRef } from 'react'
 const slashMotion = {
   rest: {
     display: 'none',
-    left: 20,
+    y: 10,
     opacity: 0,
   },
   hover: {
     display: 'block',
     opacity: 1,
-    left: -10,
+    y: 0,
     transition: {
       type: 'spring',
       stiffness: 260,

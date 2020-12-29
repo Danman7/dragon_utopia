@@ -8,6 +8,11 @@ import ReactMarkdown from 'react-markdown'
 import Header from '../components/header'
 import Layout from '../components/layout'
 
+const scrollFadeVariants = {
+  visible: { opacity: 1, scale: 1 },
+  hidden: { opacity: 0, scale: 0.9 },
+}
+
 const Section = ({ section }) => {
   const controls = useAnimation()
   const [ref, inView] = useInView()
@@ -24,10 +29,8 @@ const Section = ({ section }) => {
       ref={ref}
       animate={controls}
       initial="hidden"
-      variants={{
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-      }}
+      variants={scrollFadeVariants}
+      transition={{ duration: 0.5 }}
     >
       <ReactMarkdown
         source={section.content}
