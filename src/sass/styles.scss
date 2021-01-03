@@ -30,6 +30,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
   -webkit-overflow-scrolling: touch;
+  letter-spacing: 0.1px;
 }
 
 h1,
@@ -39,6 +40,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
+  line-height: 1.25;
 }
 
 h1 {
@@ -97,6 +99,10 @@ ul {
 article {
   @extend .container;
   padding: 3rem 1rem;
+  
+  p {
+    margin: 0 0 1.5rem;
+  }
 
   a {
     color: $primary-color;
