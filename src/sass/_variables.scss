@@ -9,10 +9,8 @@ $light-color: #888;
 $content-width: 50em;
 
 @mixin alert($color: $primary-color) {
-  padding: 1rem;
   color: $background-color;
   background: $color;
-  border-radius: 1rem;
-  box-shadow: 5px 5px 5px rgba(#322, 0.5),
-    inset 10px 10px 10px rgba($background-color, 0.3);
+  padding: .1px 1rem;
+  border-radius: 5px;
 }
