@@ -10,7 +10,7 @@ import Layout from '../components/layout'
 
 const scrollFadeVariants = {
   visible: { opacity: 1, scale: 1 },
-  hidden: { opacity: 0, scale: 0.95 },
+  hidden: { opacity: 0, scale: 0.99 },
 }
 
 const Section = ({ section }) => {
@@ -30,7 +30,7 @@ const Section = ({ section }) => {
       animate={controls}
       initial="hidden"
       variants={scrollFadeVariants}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.2 }}
     >
       <ReactMarkdown
         source={section.content}
