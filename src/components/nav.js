@@ -1,7 +1,6 @@
 import './nav.scss'
 
 import { motion, useCycle } from 'framer-motion'
-import { Link } from 'gatsby'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import PropTypes from 'prop-types'
 import React, { useRef } from 'react'
@@ -68,15 +67,6 @@ const Path = (props) => (
   />
 )
 
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-}
-
 export const MenuToggle = () => (
   <svg width="23" height="23" viewBox="0 0 23 23">
     <Path
@@ -134,11 +124,16 @@ const Nav = ({ siteTitle, categories }) => {
         </motion.div>
       </nav>
 
-      {mobileNavIsOpen && (
-        <div className="mobile-menu">
-          <MenuLinks categories={categories} isMobile />
-        </div>
-      )}
+      <motion.div
+        animate={mobileNavIsOpen ? 'visible' : 'hidden'}
+        variants={{
+          hidden: { display: 'none', height: 0 },
+          visible: { display: 'inherit', height: 'auto' },
+        }}
+        className="mobile-menu"
+      >
+        <MenuLinks categories={categories} isMobile />
+      </motion.div>
     </>
   )
 }

@@ -11,6 +11,17 @@ nav,
 
   a {
     color: white;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 
   > a i {
@@ -73,6 +84,10 @@ nav {
     position: relative;
     cursor: pointer;
 
+    &:hover {
+      color: $primary-color;
+    }
+
     .dropdown-menu {
       z-index: 10;
       background-color: rgba(10, 10, 10, 0.8);
@@ -115,10 +130,10 @@ nav {
 }
 
 .mobile-menu {
-  background-color: $primary-color;
+  background-color: $text-color;
   padding: 50px 0.5em 0.5em;
 
   a.active {
-    text-decoration: underline;
+    color: $primary-color;
   }
 }

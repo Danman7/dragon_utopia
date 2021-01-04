@@ -6,6 +6,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -99,7 +100,7 @@ ul {
 article {
   @extend .container;
   padding: 3rem 1rem;
-  
+
   p {
     margin: 0 0 1.5rem;
   }
@@ -250,11 +251,11 @@ input[type='text'] {
   display: inline-block;
   width: 50%;
   vertical-align: top;
+  margin-bottom: 2rem;
 
   @media screen and (max-width: $content-width) {
     display: block;
     width: 100%;
-    margin-bottom: 2rem;
   }
 }
 
@@ -264,7 +265,6 @@ input[type='text'] {
   }
 
   h2 {
-    padding: 0.2rem;
     font-size: 1.602rem;
   }
 

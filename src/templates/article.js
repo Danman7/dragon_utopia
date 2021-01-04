@@ -69,7 +69,27 @@ const ArticleTemplate = ({ data }) => {
 
       <article>
         {sections.map((section, i) => (
-          <Section section={section} key={`section-${i}`} />
+          <ReactMarkdown
+            className={section.className || ''}
+            source={section.content}
+            renderers={{
+              image: ({ src, alt, title }) => {
+                return (
+                  <>
+                    <a href={src}>
+                      <motion.img
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        src={src}
+                        alt={alt}
+                      />
+                    </a>
+                    {title && <small className="description">{title}</small>}
+                  </>
+                )
+              },
+            }}
+          />
         ))}
       </article>
     </Layout>

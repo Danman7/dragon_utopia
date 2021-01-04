@@ -6,6 +6,37 @@ header {
   text-align: center;
   color: white;
 
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:active,
+    &:hover,
+    &.active {
+      text-decoration: none;
+    }
+  }
+
+  .scroll-arrow {
+    display: none;
+  }
+
+  &.full-size {
+    height: 100vh;
+
+    .title-image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    .scroll-arrow {
+      display: inherit;
+    }
+  }
+
   h1,
   .lead {
     margin: 0 auto;
