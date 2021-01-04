@@ -1,0 +1,11 @@
+@import '../sass/variables';
+
+footer {
+  display: flex;
+  background: $text-color;
+  color: white;
+
+  .container {
+    padding: 1rem;
+  }
+}

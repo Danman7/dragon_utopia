@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import Footer from './footer'
 import Nav from './nav'
 
 const Layout = ({ children }) => {
@@ -42,6 +43,7 @@ const Layout = ({ children }) => {
         categories={data.allStrapiCategory.edges.map((item) => item.node)}
       />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }
