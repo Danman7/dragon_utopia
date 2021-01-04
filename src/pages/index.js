@@ -79,7 +79,12 @@ const IndexPage = ({ data }) => {
               return (
                 <Element variants={slideVariants('right')}>
                   <a href={src}>
-                    <motion.img src={src} alt={alt} />
+                    <motion.img
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      src={src}
+                      alt={alt}
+                    />
                   </a>
                   {title && <small>{title}</small>}
                 </Element>
