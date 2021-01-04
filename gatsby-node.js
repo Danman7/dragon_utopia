@@ -4,7 +4,7 @@ const makeRequest = (graphql, request) =>
   new Promise((resolve, reject) => {
     // Query for nodes to use in creating pages.
     resolve(
-      graphql(request).then(result => {
+      graphql(request).then((result) => {
         if (result.errors) {
           reject(result.errors)
         }
@@ -33,24 +33,33 @@ exports.createPagesStatefully = ({ actions, graphql }) => {
       }
     }
     `
-  ).then(result => {
+  ).then((result) => {
     // Create pages for each article.
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.slug}`,
-        component: path.resolve(`src/templates/article.js`),
+        component: path.resolve(`src/templates/article.tsx`),
         context: {
-          id: node.id
-        }
+          id: node.id,
+        },
       })
     })
 
     createPage({
       path: `/compare-creatures`,
-      component: path.resolve(`src/templates/compare-creatures.js`)
+      component: path.resolve(`src/templates/compare-creatures.tsx`),
     })
   })
 
   // Query for articles nodes to use in creating pages.
   return getDataFromStrapi
+}
+
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: '@babel/plugin-transform-react-jsx',
+    options: {
+      runtime: 'automatic',
+    },
+  })
 }
