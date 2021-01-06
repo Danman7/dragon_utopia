@@ -86,7 +86,7 @@ const IndexPage = ({ data }) => {
                       alt={alt}
                     />
                   </a>
-                  {title && <small>{title}</small>}
+                  {title && <small className="description">{title}</small>}
                 </Element>
               )
             },
