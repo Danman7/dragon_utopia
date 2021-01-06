@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import React, { useEffect, useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 
 import Button from '../../components/button'
 
@@ -40,11 +40,11 @@ const CheckboxFilter = ({ column }) => {
   return (
     <div className="checkbox-group">
       <div>
-        <h5>
+        <div className="lead">
           {column.Header}{' '}
           <Button onClick={() => setFilter(allOptions)}>Select All</Button>{' '}
           <Button onClick={() => setFilter([])}>Select None</Button>
-        </h5>
+        </div>
       </div>
       <div className="checkbox-items">
         {allOptions.map((option) => (

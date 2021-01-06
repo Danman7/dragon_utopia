@@ -70,6 +70,11 @@ const IndexPage = ({ data }) => {
                 </Element>
               )
             },
+            blockquote: ({ children }) => (
+              <Element>
+                <blockquote>{children}</blockquote>
+              </Element>
+            ),
             paragraph: ({ children }) => (
               <Element>
                 <p>{children}</p>

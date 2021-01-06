@@ -4,13 +4,13 @@ $success-color: #50bf60;
 $danger-color: #f23720;
 $background-color: #fff9f9;
 $text-color: #322;
-$light-color: #888;
+$dark-color: #030303;
 
 $content-width: 50em;
 
 @mixin alert($color: $primary-color) {
   color: $background-color;
   background: $color;
-  padding: .1px 1rem;
+  padding: 0.1px 1rem;
   border-radius: 5px;
 }

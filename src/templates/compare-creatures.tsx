@@ -243,7 +243,7 @@ const CompareCreaturesTemplate = memo(() => {
             />
           </div>
 
-          <p className="fine">Displaying {rows.length} results.</p>
+          <small>Displaying {rows.length} results.</small>
         </article>
       </div>
       {/* Table */}

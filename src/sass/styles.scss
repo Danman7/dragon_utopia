@@ -88,6 +88,11 @@ ul {
   }
 }
 
+blockquote {
+  margin: 0;
+}
+
+blockquote,
 .lead {
   font-size: 1.25rem;
 }
@@ -139,8 +144,6 @@ input[type='text'] {
 // Checkbox
 
 .checkbox-group {
-  margin: 1rem 0;
-
   button {
     padding: 0.2em 0.5em;
     border-radius: 0.5em;
@@ -203,9 +206,13 @@ input[type='text'] {
 }
 
 .dummy-header {
-  background-color: $text-color;
+  background-color: $dark-color;
   padding-top: 2.5rem;
   color: #fff;
+
+  article {
+    padding: 1rem 0;
+  }
 }
 
 // Sections
@@ -276,11 +283,8 @@ input[type='text'] {
     font-size: 1.266rem;
   }
 
-  h5 {
-    font-size: 1.125rem;
-  }
-
-  .lead {
+  .lead,
+  blockquote {
     font-size: 1.125rem;
   }
 
