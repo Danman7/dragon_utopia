@@ -1,12 +1,33 @@
 import { motion } from 'framer-motion'
 import { graphql } from 'gatsby'
+import { FluidObject } from 'gatsby-image'
 import { Helmet } from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
 
 import Header from '../components/header'
 import Layout from '../components/layout'
 
-const ArticleTemplate = ({ data }) => {
+interface Section {
+  className: string
+  content: string
+}
+
+interface ArticleProps {
+  data: {
+    strapiArticle: {
+      title: string
+      lead: string
+      headerImage: {
+        childImageSharp: {
+          fixed: FluidObject
+        }
+      }
+      sections: Section[]
+    }
+  }
+}
+
+const ArticleTemplate = ({ data }: ArticleProps) => {
   const { title, sections, headerImage, lead } = data.strapiArticle
 
   return (

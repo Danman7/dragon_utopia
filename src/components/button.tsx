@@ -1,9 +1,15 @@
 import './button.scss'
 
 import { motion } from 'framer-motion'
-import React from 'react'
+import { FC } from 'react'
 
-const Header = ({ onClick, children, isSubmit, small }) => {
+interface ButtonProps {
+  onClick?: () => void
+  children: string | number | readonly string[]
+  isSubmit: boolean
+}
+
+const Button: FC<ButtonProps> = ({ onClick, children, isSubmit }) => {
   return isSubmit ? (
     <motion.input
       whileHover={{ scale: 1.1 }}
@@ -23,4 +29,4 @@ const Header = ({ onClick, children, isSubmit, small }) => {
   )
 }
 
-export default Header
+export default Button

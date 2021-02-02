@@ -47,7 +47,7 @@ exports.createPagesStatefully = ({ actions, graphql }) => {
 
     createPage({
       path: `/compare-creatures`,
-      component: path.resolve(`src/templates/compare-creatures.tsx`),
+      component: path.resolve(`src/templates/compare-creatures.js`),
     })
   })
 

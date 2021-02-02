@@ -8,5 +8,12 @@
   "plugins": ["jsx-a11y", "import"],
   "rules": {
     "jsx-a11y/anchor-is-valid": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }
