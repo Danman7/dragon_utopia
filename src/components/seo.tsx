@@ -11,9 +11,9 @@ import Helmet from 'react-helmet'
 
 interface SEOProps {
   title: string
-  lang: string
-  description: string
-  meta: any
+  lang?: string
+  description?: string
+  meta?: any
 }
 
 const SEO: FC<SEOProps> = ({

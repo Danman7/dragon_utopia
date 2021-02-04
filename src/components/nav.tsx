@@ -1,7 +1,7 @@
 import './nav.scss'
 
 import { motion, useCycle } from 'framer-motion'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { useRef } from 'react'
 
@@ -54,24 +54,22 @@ const MenuLinks = ({
 
         <motion.div variants={slashMotion} className="dropdown-menu">
           {category.articles.sort().map((article) => (
-            <AniLink
-              cover
-              bg="#e68a49"
+            <Link
               className="dropdown-item"
               to={`/${article.slug}`}
               key={article.id}
               activeClassName="active"
             >
               {article.title}
-            </AniLink>
+            </Link>
           ))}
         </motion.div>
       </motion.div>
     ))}
 
-    <AniLink cover bg="#e68a49" className="lead" to="/compare-creatures">
+    <Link className="lead" to="/compare-creatures">
       Compare Creatures
-    </AniLink>
+    </Link>
   </>
 )
 
@@ -127,12 +125,12 @@ const Nav = ({
   return (
     <>
       <nav>
-        <AniLink cover bg="#e68a49" to="/">
+        <Link to="/">
           <h4>
             <i className="game-icon game-icon-spiked-dragon-head"></i>
             {siteTitle}
           </h4>
-        </AniLink>
+        </Link>
 
         <div className="menu-links">
           <MenuLinks categories={categories} />
@@ -156,7 +154,7 @@ const Nav = ({
         animate={mobileNavIsOpen ? 'visible' : 'hidden'}
         variants={{
           hidden: { display: 'none', height: 0 },
-          visible: { display: 'inherit', height: 'auto' },
+          visible: { display: 'block', height: 'auto' },
         }}
         className="mobile-menu"
       >

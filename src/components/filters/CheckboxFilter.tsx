@@ -11,24 +11,32 @@ interface CheckboxProps {
     filterValue: (string | number)[]
     setFilter: (value: string | number) => void
   }
+  isToggle?: boolean
 }
 
-const CheckboxFilter = ({ column }: CheckboxProps) => {
+const CheckboxFilter = ({ column, isToggle }: CheckboxProps) => {
   const { preFilteredRows, id, filterValue, setFilter, Header } = column
 
-  const allOptions = useMemo(() => {
-    const options = new Set()
-    preFilteredRows.forEach((row) => {
-      options.add(row.values[id])
-    })
-    return [...options.values()]
-  }, [id, preFilteredRows])
+  const allOptions = isToggle
+    ? ['Yes', 'No']
+    : useMemo(() => {
+        const options = new Set()
+        preFilteredRows.forEach((row) => {
+          options.add(row.values[id])
+        })
+        return [...options.values()]
+      }, [id, preFilteredRows])
 
   const setCheckboxFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = e.target
 
     const updatedValue =
-      Header === 'Town' || Header === 'Upgrade' ? value : parseInt(value, 10)
+      Header === 'Town' ||
+      Header === 'Upgrade' ||
+      Header === 'Ranged' ||
+      Header === 'Movement'
+        ? value
+        : parseInt(value, 10)
 
     if (!filterValue) {
       setFilter([updatedValue])
@@ -50,8 +58,12 @@ const CheckboxFilter = ({ column }: CheckboxProps) => {
       <div>
         <div className="lead">
           {column.Header}{' '}
-          <Button onClick={() => setFilter(allOptions)}>Select All</Button>{' '}
-          <Button onClick={() => setFilter([])}>Select None</Button>
+          {!isToggle && allOptions.length > 2 && (
+            <>
+              <Button onClick={() => setFilter(allOptions)}>Select All</Button>{' '}
+              <Button onClick={() => setFilter([])}>Select None</Button>
+            </>
+          )}
         </div>
       </div>
       <div className="checkbox-items">

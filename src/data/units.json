@@ -12,7 +12,7 @@
     "minDamage": 1,
     "maxDamage": 3,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -28,7 +28,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -44,7 +44,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 12
   },
@@ -61,7 +61,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24,
     "specials": ["Two attacks"]
@@ -80,7 +80,7 @@
     "minDamage": 3,
     "maxDamage": 6,
     "speed": 6,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Extra retaliation"]
   },
@@ -98,7 +98,7 @@
     "minDamage": 3,
     "maxDamage": 6,
     "speed": 9,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Always retaliates"]
   },
@@ -115,7 +115,7 @@
     "minDamage": 6,
     "maxDamage": 9,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -131,7 +131,7 @@
     "minDamage": 7,
     "maxDamage": 10,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Two attacks"]
   },
@@ -148,7 +148,7 @@
     "minDamage": 10,
     "maxDamage": 12,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 12
   },
@@ -165,7 +165,7 @@
     "minDamage": 10,
     "maxDamage": 12,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24,
     "specials": ["No melee penalty"]
@@ -183,7 +183,7 @@
     "minDamage": 15,
     "maxDamage": 25,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["+5% damage/hex when attacking"]
   },
@@ -200,7 +200,7 @@
     "minDamage": 20,
     "maxDamage": 25,
     "speed": 9,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["+5% damage/hex when attacking"]
   },
@@ -220,7 +220,7 @@
     "defense": 20,
     "maxDamage": 50,
     "speed": 12,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["150% damage to devils"]
   },
@@ -240,7 +240,7 @@
     "defense": 30,
     "maxDamage": 50,
     "speed": 18,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["150% damage to devils", "Can ressurect allies"]
   },
@@ -258,7 +258,7 @@
     "minDamage": 1,
     "maxDamage": 2,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -275,7 +275,7 @@
     "minDamage": 1,
     "maxDamage": 2,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["20% Mana steal"]
   },
@@ -292,7 +292,7 @@
     "minDamage": 2,
     "maxDamage": 4,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 12
   },
@@ -309,7 +309,7 @@
     "minDamage": 2,
     "maxDamage": 4,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24,
     "specials": ["Splash damage to all"]
@@ -328,7 +328,7 @@
     "minDamage": 2,
     "maxDamage": 7,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2
   },
   {
@@ -345,7 +345,7 @@
     "minDamage": 2,
     "maxDamage": 7,
     "speed": 8,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["No retaliation", "Attacks 3 hexes"]
   },
@@ -362,7 +362,7 @@
     "minDamage": 7,
     "maxDamage": 9,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -378,7 +378,7 @@
     "minDamage": 7,
     "maxDamage": 9,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -394,7 +394,7 @@
     "minDamage": 13,
     "maxDamage": 17,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -410,7 +410,7 @@
     "minDamage": 13,
     "maxDamage": 17,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Resurrect dead allies as demons"]
   },
@@ -427,7 +427,7 @@
     "minDamage": 16,
     "maxDamage": 24,
     "speed": 9,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Immune to fire", "150% damage to genies"]
   },
@@ -444,7 +444,7 @@
     "minDamage": 16,
     "maxDamage": 24,
     "speed": 13,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Immune to fire", "150% damage to genies", "Fire shield"]
   },
@@ -465,7 +465,7 @@
     "minDamage": 30,
     "maxDamage": 40,
     "speed": 11,
-    "movement": "flying",
+    "movement": "Teleport",
     "size": 1,
     "specials": ["No retaliation", "150% damage to angels", "-1 enemy luck"]
   },
@@ -486,7 +486,7 @@
     "minDamage": 30,
     "maxDamage": 40,
     "speed": 17,
-    "movement": "flying",
+    "movement": "Teleport",
     "size": 1,
     "specials": ["No retaliation", "150% damage to angels", "-1 enemy luck"]
   },
@@ -503,7 +503,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2
   },
   {
@@ -519,7 +519,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 8,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2
   },
   {
@@ -536,7 +536,7 @@
     "minDamage": 2,
     "maxDamage": 4,
     "speed": 3,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["20% magic resistance"]
   },
@@ -554,7 +554,7 @@
     "minDamage": 2,
     "maxDamage": 4,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["40% magic resistance"]
   },
@@ -571,7 +571,7 @@
     "minDamage": 3,
     "maxDamage": 5,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24
   },
@@ -588,7 +588,7 @@
     "minDamage": 3,
     "maxDamage": 5,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24,
     "specials": ["Two attacks"]
@@ -606,7 +606,7 @@
     "minDamage": 5,
     "maxDamage": 9,
     "speed": 8,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["+2 mana for enemy spells"]
   },
@@ -623,7 +623,7 @@
     "minDamage": 5,
     "maxDamage": 9,
     "speed": 12,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["+2 mana for enemy spells"]
   },
@@ -641,7 +641,7 @@
     "minDamage": 10,
     "maxDamage": 14,
     "speed": 3,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Root enemy in place"]
   },
@@ -659,7 +659,7 @@
     "minDamage": 10,
     "maxDamage": 14,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Root enemy in place"]
   },
@@ -676,7 +676,7 @@
     "minDamage": 18,
     "maxDamage": 22,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": [
       "20% chance to blind on attack",
@@ -696,7 +696,7 @@
     "minDamage": 18,
     "maxDamage": 22,
     "speed": 9,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": [
       "20% chance to blind on attack",
@@ -720,7 +720,7 @@
     "minDamage": 40,
     "maxDamage": 50,
     "speed": 10,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Hits 1 hex behind target", "Immune to level 1-3 spells"]
   },
@@ -741,7 +741,7 @@
     "minDamage": 40,
     "maxDamage": 50,
     "speed": 16,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Hits 1 hex behind target", "Immune to level 1-4 spells"]
   },
@@ -758,7 +758,7 @@
     "minDamage": 1,
     "maxDamage": 2,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -774,7 +774,7 @@
     "minDamage": 1,
     "maxDamage": 2,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 8
   },
@@ -792,7 +792,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 6,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Non-living"]
   },
@@ -810,7 +810,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 9,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Non-living"]
   },
@@ -827,7 +827,7 @@
     "minDamage": 4,
     "maxDamage": 5,
     "speed": 3,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Non-living", "Takes -50% spell damage"]
   },
@@ -844,7 +844,7 @@
     "minDamage": 4,
     "maxDamage": 5,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Non-living", "Takes -75% spell damage"]
   },
@@ -861,7 +861,7 @@
     "minDamage": 7,
     "maxDamage": 9,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["No melee penalty", "-2 mana for hero spells"],
     "shots": 24
@@ -879,7 +879,7 @@
     "minDamage": 7,
     "maxDamage": 9,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": [
       "No melee penalty",
@@ -901,7 +901,7 @@
     "minDamage": 13,
     "maxDamage": 16,
     "speed": 7,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["150% damage to efreeti"]
   },
@@ -918,7 +918,7 @@
     "minDamage": 13,
     "maxDamage": 16,
     "speed": 11,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["150% damage to efreeti", "Cast random buff to ally"]
   },
@@ -934,7 +934,7 @@
     "defense": 13,
     "maxDamage": 20,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["No retaliation"]
   },
@@ -950,7 +950,7 @@
     "defense": 13,
     "maxDamage": 30,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["No retaliation"]
   },
@@ -971,7 +971,7 @@
     "minDamage": 40,
     "maxDamage": 60,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Mind spell immunity"]
   },
@@ -992,7 +992,7 @@
     "minDamage": 40,
     "maxDamage": 60,
     "speed": 11,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Mind spell immunity", "150% damage to Black Dragons"],
     "shots": 24
@@ -1011,7 +1011,7 @@
     "minDamage": 1,
     "maxDamage": 3,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Undead"]
   },
@@ -1029,7 +1029,7 @@
     "minDamage": 1,
     "maxDamage": 3,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Undead"]
   },
@@ -1046,7 +1046,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 3,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Undead"]
   },
@@ -1063,7 +1063,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Undead", "20% chance to disease on attack"]
   },
@@ -1080,7 +1080,7 @@
     "minDamage": 3,
     "maxDamage": 5,
     "speed": 5,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Undead", "Regenerate HP"]
   },
@@ -1097,7 +1097,7 @@
     "minDamage": 3,
     "maxDamage": 5,
     "speed": 7,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Undead", "Regenerate HP", "Mana steal (2 points)"]
   },
@@ -1114,7 +1114,7 @@
     "minDamage": 5,
     "maxDamage": 8,
     "speed": 6,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Undead", "No retaliation"]
   },
@@ -1131,7 +1131,7 @@
     "minDamage": 5,
     "maxDamage": 8,
     "speed": 9,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Undead", "No retaliation", "Resurrect self on attack"]
   },
@@ -1148,7 +1148,7 @@
     "minDamage": 11,
     "maxDamage": 13,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Undead", "Splash damage to living units"],
     "shots": 12
@@ -1166,7 +1166,7 @@
     "minDamage": 11,
     "maxDamage": 15,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Undead", "Splash damage to living units"],
     "shots": 24
@@ -1184,7 +1184,7 @@
     "minDamage": 15,
     "maxDamage": 30,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["Undead", "20% chance to curse enemy"]
   },
@@ -1201,7 +1201,7 @@
     "minDamage": 15,
     "maxDamage": 30,
     "speed": 9,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": [
       "Undead",
@@ -1222,7 +1222,7 @@
     "minDamage": 25,
     "maxDamage": 50,
     "speed": 9,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Undead", "-1 enemy morale"]
   },
@@ -1243,7 +1243,7 @@
     "minDamage": 25,
     "maxDamage": 50,
     "speed": 14,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Undead", "-1 enemy morale", "20% chance to age enemy"]
   },
@@ -1261,7 +1261,7 @@
     "minDamage": 1,
     "maxDamage": 3,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Immune to blind"]
   },
@@ -1279,7 +1279,7 @@
     "minDamage": 1,
     "maxDamage": 3,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Immune to blind"]
   },
@@ -1296,7 +1296,7 @@
     "minDamage": 1,
     "maxDamage": 4,
     "speed": 6,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Return to original hex after attack"]
   },
@@ -1313,7 +1313,7 @@
     "minDamage": 1,
     "maxDamage": 4,
     "speed": 9,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Return to original hex after attack", "No retaliation"]
   },
@@ -1330,7 +1330,7 @@
     "minDamage": 3,
     "maxDamage": 5,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["No melee penalty"],
     "shots": 12
@@ -1348,7 +1348,7 @@
     "minDamage": 3,
     "maxDamage": 5,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["No melee penalty"],
     "shots": 12
@@ -1366,7 +1366,7 @@
     "minDamage": 6,
     "maxDamage": 8,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["No melee penalty", "20% chance to turn enemies to stone"],
     "shots": 4
@@ -1384,7 +1384,7 @@
     "minDamage": 6,
     "maxDamage": 8,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["No melee penalty", "20% chance to turn enemies to stone"],
     "shots": 8
@@ -1402,7 +1402,7 @@
     "minDamage": 12,
     "maxDamage": 20,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Morale always 1+"]
   },
@@ -1419,7 +1419,7 @@
     "minDamage": 12,
     "maxDamage": 20,
     "speed": 8,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Morale always 1+"]
   },
@@ -1436,7 +1436,7 @@
     "minDamage": 14,
     "maxDamage": 20,
     "speed": 7,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2
   },
   {
@@ -1452,7 +1452,7 @@
     "minDamage": 14,
     "maxDamage": 20,
     "speed": 11,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["20% chance to paralyze on attack"]
   },
@@ -1473,7 +1473,7 @@
     "minDamage": 40,
     "maxDamage": 50,
     "speed": 11,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Immune to level 1-3 spells"]
   },
@@ -1494,7 +1494,7 @@
     "minDamage": 40,
     "maxDamage": 50,
     "speed": 15,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Immune to all spells", "150% damage to giants and titans"]
   },
@@ -1512,7 +1512,7 @@
     "minDamage": 1,
     "maxDamage": 2,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -1529,7 +1529,7 @@
     "minDamage": 1,
     "maxDamage": 2,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -1545,7 +1545,7 @@
     "minDamage": 2,
     "maxDamage": 4,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2
   },
   {
@@ -1561,7 +1561,7 @@
     "minDamage": 3,
     "maxDamage": 4,
     "speed": 8,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["Two attacks"]
   },
@@ -1578,7 +1578,7 @@
     "minDamage": 2,
     "maxDamage": 5,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 12
   },
@@ -1595,7 +1595,7 @@
     "minDamage": 2,
     "maxDamage": 5,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24
   },
@@ -1612,7 +1612,7 @@
     "minDamage": 6,
     "maxDamage": 12,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -1628,7 +1628,7 @@
     "minDamage": 6,
     "maxDamage": 12,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Cast bloodlust on allies"]
   },
@@ -1645,7 +1645,7 @@
     "minDamage": 11,
     "maxDamage": 15,
     "speed": 7,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2
   },
   {
@@ -1661,7 +1661,7 @@
     "minDamage": 11,
     "maxDamage": 15,
     "speed": 11,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["20% chance for thunderbolt on attack"]
   },
@@ -1678,7 +1678,7 @@
     "minDamage": 16,
     "maxDamage": 20,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 16,
     "specials": ["Attack seige walls at basic ballistics"]
@@ -1696,7 +1696,7 @@
     "minDamage": 16,
     "maxDamage": 20,
     "speed": 8,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24,
     "specials": ["Attack seige walls at advanced ballistics"]
@@ -1714,7 +1714,7 @@
     "minDamage": 30,
     "maxDamage": 50,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["Ignores 40% of target defense"]
   },
@@ -1735,7 +1735,7 @@
     "minDamage": 30,
     "maxDamage": 50,
     "speed": 9,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["Ignores 80% of target defense"]
   },
@@ -1753,7 +1753,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -1770,7 +1770,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -1786,7 +1786,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 12
   },
@@ -1803,7 +1803,7 @@
     "minDamage": 2,
     "maxDamage": 5,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24
   },
@@ -1820,7 +1820,7 @@
     "minDamage": 2,
     "maxDamage": 5,
     "speed": 9,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["Always casts dispell on attack"]
   },
@@ -1837,7 +1837,7 @@
     "minDamage": 2,
     "maxDamage": 5,
     "speed": 13,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": [
       "Always casts dispell on attack",
@@ -1857,7 +1857,7 @@
     "minDamage": 6,
     "maxDamage": 10,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["20% chance to turn enemies to stone"]
   },
@@ -1874,7 +1874,7 @@
     "minDamage": 6,
     "maxDamage": 10,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["20% chance to turn enemies to stone"]
   },
@@ -1891,7 +1891,7 @@
     "minDamage": 12,
     "maxDamage": 16,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2
   },
   {
@@ -1907,7 +1907,7 @@
     "minDamage": 12,
     "maxDamage": 16,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["10% chance for death stare"]
   },
@@ -1924,7 +1924,7 @@
     "minDamage": 14,
     "maxDamage": 18,
     "speed": 7,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2
   },
   {
@@ -1940,7 +1940,7 @@
     "minDamage": 18,
     "maxDamage": 22,
     "speed": 11,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Chance to poison on attack"]
   },
@@ -1957,7 +1957,7 @@
     "minDamage": 25,
     "maxDamage": 45,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["No retaliation", "Hits all adjacent targets"]
   },
@@ -1978,7 +1978,7 @@
     "minDamage": 25,
     "maxDamage": 45,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["No retaliation", "Hits all adjacent targets"]
   },
@@ -1996,7 +1996,7 @@
     "minDamage": 1,
     "maxDamage": 2,
     "speed": 7,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1
   },
   {
@@ -2013,7 +2013,7 @@
     "minDamage": 1,
     "maxDamage": 3,
     "speed": 9,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": ["No retaliation"]
   },
@@ -2030,7 +2030,7 @@
     "minDamage": 2,
     "maxDamage": 8,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": [
       "Immune to mind and meteor shower",
@@ -2050,7 +2050,7 @@
     "minDamage": 2,
     "maxDamage": 8,
     "speed": 8,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": [
       "Immune to mind and meteor shower",
@@ -2072,7 +2072,7 @@
     "minDamage": 3,
     "maxDamage": 7,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": [
       "Immune to mind and some watter spells",
@@ -2092,7 +2092,7 @@
     "minDamage": 3,
     "maxDamage": 7,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": [
       "Immune to mind and some watter spells",
@@ -2114,7 +2114,7 @@
     "minDamage": 4,
     "maxDamage": 6,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Immune to mind and fire", "Weak to some air spells"]
   },
@@ -2131,7 +2131,7 @@
     "minDamage": 4,
     "maxDamage": 6,
     "speed": 8,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 1,
     "specials": [
       "Immune to mind and fire",
@@ -2152,7 +2152,7 @@
     "minDamage": 4,
     "maxDamage": 8,
     "speed": 4,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Immune to mind and some air spells", "Weak to meteor shower"]
   },
@@ -2169,7 +2169,7 @@
     "minDamage": 6,
     "maxDamage": 10,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": [
       "Immune to mind and some air spells",
@@ -2190,7 +2190,7 @@
     "minDamage": 10,
     "maxDamage": 20,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": [
       "Immune to mind spells",
@@ -2211,7 +2211,7 @@
     "minDamage": 15,
     "maxDamage": 25,
     "speed": 9,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": [
       "Immune to all spells",
@@ -2232,7 +2232,7 @@
     "minDamage": 30,
     "maxDamage": 40,
     "speed": 15,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Immune to fire", "Hits 1 hex behind target"]
   },
@@ -2253,7 +2253,7 @@
     "minDamage": 30,
     "maxDamage": 40,
     "speed": 21,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": [
       "Immune to fire",
@@ -2273,7 +2273,7 @@
     "defense": 1,
     "maxDamage": 1,
     "speed": 3,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -2289,7 +2289,7 @@
     "minDamage": 1,
     "maxDamage": 3,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "shots": 24,
     "specials": ["Luck always 1+"]
@@ -2307,7 +2307,7 @@
     "minDamage": 2,
     "maxDamage": 4,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["More info at thieve's guild"]
   },
@@ -2324,7 +2324,7 @@
     "minDamage": 2,
     "maxDamage": 3,
     "speed": 6,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1
   },
   {
@@ -2340,7 +2340,7 @@
     "minDamage": 3,
     "maxDamage": 5,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Cast curse on attack"]
   },
@@ -2357,7 +2357,7 @@
     "minDamage": 2,
     "maxDamage": 6,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["Extra speed on sand"]
   },
@@ -2374,7 +2374,7 @@
     "minDamage": 8,
     "maxDamage": 10,
     "speed": 9,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["No penalty for range or wall"],
     "shots": 32
@@ -2392,7 +2392,7 @@
     "minDamage": 10,
     "maxDamage": 15,
     "speed": 7,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Regenerate HP"]
   },
@@ -2409,7 +2409,7 @@
     "minDamage": 8,
     "maxDamage": 10,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Non-living", "85% spell damage resistance"]
   },
@@ -2426,7 +2426,7 @@
     "minDamage": 10,
     "maxDamage": 14,
     "speed": 5,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Non-living", "95% spell damage resistance"]
   },
@@ -2442,7 +2442,7 @@
     "defense": 12,
     "maxDamage": 14,
     "speed": 9,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 1,
     "specials": ["Cast mass spell"],
     "shots": 32
@@ -2464,7 +2464,7 @@
     "minDamage": 20,
     "maxDamage": 30,
     "speed": 15,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Cast random spell each turn"]
   },
@@ -2484,7 +2484,7 @@
     "defense": 30,
     "maxDamage": 50,
     "speed": 17,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": [
       "Acid breath (reduce defense)",
@@ -2509,7 +2509,7 @@
     "minDamage": 60,
     "maxDamage": 75,
     "speed": 16,
-    "movement": "ground",
+    "movement": "Ground",
     "size": 2,
     "specials": ["1-2 Crystal per week"]
   },
@@ -2530,7 +2530,7 @@
     "minDamage": 70,
     "maxDamage": 80,
     "speed": 19,
-    "movement": "flying",
+    "movement": "Flying",
     "size": 2,
     "specials": ["Hits 1 hex behind target", "Chance to cast fear"]
   }

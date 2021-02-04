@@ -1,4 +1,4 @@
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -19,7 +19,7 @@ const NotFoundPage = () => (
         try again with a different URL.
       </p>
       <p>
-        Or try the <AniLink to="/">homepage</AniLink>.
+        Or try the <Link to="/">homepage</Link>.
       </p>
     </article>
   </Layout>

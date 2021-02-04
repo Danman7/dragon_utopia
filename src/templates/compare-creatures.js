@@ -33,6 +33,20 @@ const checkboxFilter = (rows, id, filterValue) => {
   })
 }
 
+const toggleFilter = (rows, id, filterValue) => {
+  return rows.filter((row) => {
+    const rowValue = row.values[id]
+
+    return filterValue.length > 1
+      ? true
+      : filterValue.includes('Yes')
+      ? !!rowValue
+      : filterValue.includes('No')
+      ? !rowValue
+      : false
+  })
+}
+
 const CompareCreaturesTemplate = memo(() => {
   const creaturesData = useMemo(() => creatures, [])
 
@@ -54,6 +68,16 @@ const CompareCreaturesTemplate = memo(() => {
       {
         Header: 'Upgrade',
         accessor: 'upgrade',
+        filter: checkboxFilter,
+      },
+      {
+        Header: 'Ranged',
+        accessor: 'shots',
+        filter: toggleFilter,
+      },
+      {
+        Header: 'Movement',
+        accessor: 'movement',
         filter: checkboxFilter,
       },
       {
@@ -219,6 +243,8 @@ const CompareCreaturesTemplate = memo(() => {
   useEffect(() => {
     columns.find((column) => column.id === 'upgrade').toggleHidden()
     columns.find((column) => column.id === 'town').toggleHidden()
+    columns.find((column) => column.id === 'shots').toggleHidden()
+    columns.find((column) => column.id === 'movement').toggleHidden()
   }, [columns])
 
   return (
@@ -229,7 +255,10 @@ const CompareCreaturesTemplate = memo(() => {
       <div className="dummy-header">
         <article>
           {/* Filters */}
-          <Search onSearch={onSearch} />
+          <Search
+            onSearch={onSearch}
+            placeholder="Type in search criteria for example Fortress or Elemental"
+          />
 
           <div className="filters">
             <CheckboxFilter
@@ -240,6 +269,13 @@ const CompareCreaturesTemplate = memo(() => {
             />
             <CheckboxFilter
               column={columns.find((column) => column.id === 'upgrade')}
+            />
+            <CheckboxFilter
+              column={columns.find((column) => column.id === 'movement')}
+            />
+            <CheckboxFilter
+              column={columns.find((column) => column.id === 'shots')}
+              isToggle
             />
           </div>
 
@@ -376,8 +412,9 @@ const CompareCreaturesTemplate = memo(() => {
                                 <sup>{cell.row.original.shots}</sup>
                               </span>
                             )}
-                          {cell.column.id === 'name' &&
-                            cell.row.original.movement === 'flying' && (
+                          {(cell.column.id === 'name' &&
+                            cell.row.original.movement === 'Flying') ||
+                            (cell.row.original.movement === 'Teleport' && (
                               <span>
                                 {' '}
                                 <img
@@ -387,7 +424,7 @@ const CompareCreaturesTemplate = memo(() => {
                                   alt="unit can move beyond obstacles"
                                 ></img>
                               </span>
-                            )}
+                            ))}
                         </td>
                       )
                     })}

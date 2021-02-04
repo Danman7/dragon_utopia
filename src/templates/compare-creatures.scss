@@ -1,6 +1,9 @@
+@import '../sass/variables';
+
 .searchbar {
   display: flex;
   width: 100%;
+  margin-bottom: 1em;
 
   > input[type='text'] {
     flex-grow: 2;
@@ -8,8 +11,16 @@
 }
 
 .table-wrapper {
-  overflow: auto;
   margin-top: -1rem;
+  @media screen and (max-width: $content-width) {
+    overflow: auto;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .compare-table {
@@ -23,12 +34,10 @@
   }
 
   th {
-    text-align: left;
-    background: #f1f1f1;
-    position: -webkit-sticky;
+    background: white;
     position: sticky;
-    top: 0;
-    z-index: 2;
+    top: -1px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
   }
 
   tfoot {

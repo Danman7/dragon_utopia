@@ -2,7 +2,13 @@ import { useState } from 'react'
 
 import Button from '../button'
 
-const Search = ({ onSearch }: { onSearch: (search: string) => void }) => {
+const Search = ({
+  onSearch,
+  placeholder,
+}: {
+  onSearch: (search: string) => void
+  placeholder?: string
+}) => {
   const [search, setSearch] = useState('')
 
   return (
@@ -18,7 +24,7 @@ const Search = ({ onSearch }: { onSearch: (search: string) => void }) => {
         type="text"
         value={search || ''}
         onChange={(e) => setSearch(e.target.value)}
-        placeholder="Type any search criteria..."
+        placeholder={placeholder || 'Type any search criteria...'}
       />
       <Button isSubmit>Search for creature</Button>
     </form>
