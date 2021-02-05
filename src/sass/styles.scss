@@ -123,6 +123,13 @@ article {
     color: $secondary-color;
     font-style: italic;
   }
+
+  .images-left {
+    img {
+      float: left;
+      margin-right: 1rem;
+    }
+  }
 }
 
 button,
