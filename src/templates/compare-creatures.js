@@ -412,9 +412,9 @@ const CompareCreaturesTemplate = memo(() => {
                                 <sup>{cell.row.original.shots}</sup>
                               </span>
                             )}
-                          {(cell.column.id === 'name' &&
-                            cell.row.original.movement === 'Flying') ||
-                            (cell.row.original.movement === 'Teleport' && (
+                          {cell.column.id === 'name' &&
+                            (cell.row.original.movement === 'Flying' ||
+                              cell.row.original.movement === 'Teleport') && (
                               <span>
                                 {' '}
                                 <img
@@ -424,7 +424,7 @@ const CompareCreaturesTemplate = memo(() => {
                                   alt="unit can move beyond obstacles"
                                 ></img>
                               </span>
-                            ))}
+                            )}
                         </td>
                       )
                     })}
