@@ -13,7 +13,7 @@ interface HeaderProps {
       fluid: FluidObject
     }
   }
-  className: string
+  className?: string
 }
 
 const Header: FC<HeaderProps> = ({

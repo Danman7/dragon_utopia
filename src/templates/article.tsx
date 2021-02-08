@@ -19,7 +19,7 @@ interface ArticleProps {
       lead: string
       headerImage: {
         childImageSharp: {
-          fixed: FluidObject
+          fluid: FluidObject
         }
       }
       sections: Section[]
@@ -39,7 +39,7 @@ const ArticleTemplate = ({ data }: ArticleProps) => {
       <Header title={title} lead={lead} titleImage={headerImage} />
 
       <article>
-        {sections.map((section, i) => (
+        {sections.map((section) => (
           <ReactMarkdown
             className={section.className || ''}
             source={section.content}
@@ -49,8 +49,8 @@ const ArticleTemplate = ({ data }: ArticleProps) => {
                   <>
                     <a href={src}>
                       <motion.img
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                         src={src}
                         alt={alt}
                       />

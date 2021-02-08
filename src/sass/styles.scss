@@ -116,17 +116,13 @@ article {
 
   img {
     max-width: 100%;
-  }
-
-  .image-description {
-    font-size: 0.85em;
-    color: $secondary-color;
-    font-style: italic;
+    text-align: center;
   }
 
   .images-left {
     img {
       float: left;
+      margin-top: 0.5rem;
       margin-right: 1rem;
     }
   }
@@ -231,6 +227,7 @@ input[type='text'] {
 }
 
 .description {
+  display: block;
   color: $secondary-color;
 }
 
