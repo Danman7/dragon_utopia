@@ -1,15 +1,15 @@
 import './compare-creatures.scss'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { memo, useEffect, useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Helmet } from 'react-helmet'
 import { useFilters, useGlobalFilter, useSortBy, useTable } from 'react-table'
 
 import CheckboxFilter from '../components/filters/CheckboxFilter'
 import Search from '../components/filters/Search'
 import Layout from '../components/layout'
+import creatures from '../data/creatures.json'
 import spriteLocations from '../data/spritelocations.json'
-import creatures from '../data/units.json'
 import crystal from '../images/crystal.png'
 import flying from '../images/flying.png'
 import gem from '../images/gem.png'
@@ -47,7 +47,7 @@ const toggleFilter = (rows, id, filterValue) => {
   })
 }
 
-const CompareCreaturesTemplate = memo(() => {
+const CompareCreaturesTemplate = () => {
   const creaturesData = useMemo(() => creatures, [])
 
   const defaultColumns = useMemo(
@@ -257,7 +257,7 @@ const CompareCreaturesTemplate = memo(() => {
           {/* Filters */}
           <Search
             onSearch={onSearch}
-            placeholder="Type in search criteria for example Fortress or Elemental"
+            description="Type in any search criteria for example 'fortress' or 'elemental'"
           />
 
           <div className="filters">
@@ -448,6 +448,6 @@ const CompareCreaturesTemplate = memo(() => {
       </div>
     </Layout>
   )
-})
+}
 
 export default CompareCreaturesTemplate

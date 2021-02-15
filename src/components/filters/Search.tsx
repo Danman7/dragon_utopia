@@ -4,10 +4,10 @@ import Button from '../button'
 
 const Search = ({
   onSearch,
-  placeholder,
+  description,
 }: {
   onSearch: (search: string) => void
-  placeholder?: string
+  description?: string
 }) => {
   const [search, setSearch] = useState('')
 
@@ -19,14 +19,17 @@ const Search = ({
       }}
       className="searchbar"
     >
-      <input
-        id="global-search"
-        type="text"
-        value={search || ''}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder={placeholder || 'Type any search criteria...'}
-      />
-      <Button isSubmit>Search for creature</Button>
+      <div>
+        <input
+          id="global-search"
+          type="text"
+          value={search || ''}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder={'Searching for...'}
+        />
+        <Button isSubmit>Search for creature</Button>
+      </div>
+      <small>{description}</small>
     </form>
   )
 }

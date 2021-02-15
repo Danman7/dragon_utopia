@@ -1,15 +1,5 @@
 @import '../sass/variables';
 
-.searchbar {
-  display: flex;
-  width: 100%;
-  margin-bottom: 1em;
-
-  > input[type='text'] {
-    flex-grow: 2;
-  }
-}
-
 .table-wrapper {
   margin-top: -1rem;
   @media screen and (max-width: $content-width) {

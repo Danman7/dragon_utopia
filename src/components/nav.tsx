@@ -70,6 +70,10 @@ const MenuLinks = ({
     <Link className="lead" to="/compare-creatures">
       Compare Creatures
     </Link>
+
+    <Link className="lead" to="/almanac">
+      Almanac
+    </Link>
   </>
 )
 

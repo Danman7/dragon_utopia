@@ -49,6 +49,11 @@ exports.createPagesStatefully = ({ actions, graphql }) => {
       path: `/compare-creatures`,
       component: path.resolve(`src/templates/compare-creatures.js`),
     })
+
+    createPage({
+      path: `/almanac`,
+      component: path.resolve(`src/templates/almanac.tsx`),
+    })
   })
 
   // Query for articles nodes to use in creating pages.

@@ -1,0 +1,53 @@
+.almanac-item {
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  background: #fff9f9;
+  box-shadow: 20px 20px 60px #d9d4d4, -20px -20px 60px #ffffff;
+  border-bottom-left-radius: 15px 50px;
+  border-bottom-right-radius: 50px 15px;
+  border-top-left-radius: 50px 15px;
+  border-top-right-radius: 15px 50px;
+  display: flex;
+
+  .card {
+    text-align: center;
+    margin-right: 1rem;
+
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .portrait {
+    margin: 0 auto;
+  }
+
+  .resource {
+    max-width: 1rem;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    > div {
+      width: 33%;
+      flex-shrink: 0;
+    }
+  }
+
+  &.creature {
+    .portrait {
+      background-image: url(../images/creature_portraits.png);
+      width: 58px;
+      height: 64px;
+    }
+  }
+}

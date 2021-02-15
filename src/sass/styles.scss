@@ -273,6 +273,19 @@ input[type='text'] {
   }
 }
 
+.searchbar {
+  margin-bottom: 1em;
+
+  > div {
+    display: flex;
+    width: 100%;
+  }
+
+  input[type='text'] {
+    flex-grow: 2;
+  }
+}
+
 @media screen and (max-width: $content-width) {
   h1 {
     font-size: 1.802rem;

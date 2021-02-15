@@ -465,7 +465,7 @@
     "minDamage": 30,
     "maxDamage": 40,
     "speed": 11,
-    "movement": "Teleport",
+    "movement": "Teleporting",
     "size": 1,
     "specials": ["No retaliation", "150% damage to angels", "-1 enemy luck"]
   },
@@ -486,7 +486,7 @@
     "minDamage": 30,
     "maxDamage": 40,
     "speed": 17,
-    "movement": "Teleport",
+    "movement": "Teleporting",
     "size": 1,
     "specials": ["No retaliation", "150% damage to angels", "-1 enemy luck"]
   },
