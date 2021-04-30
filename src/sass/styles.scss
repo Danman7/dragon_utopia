@@ -108,6 +108,7 @@ article {
 
   p {
     margin: 0 0 1.5rem;
+    width: clamp(45ch, 50%, 75ch);
   }
 
   a {
