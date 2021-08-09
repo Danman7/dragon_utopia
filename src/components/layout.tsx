@@ -1,5 +1,4 @@
 import '../sass/styles.scss'
-import '../game-icons.css'
 
 import { graphql, useStaticQuery } from 'gatsby'
 import { ReactNode } from 'react'

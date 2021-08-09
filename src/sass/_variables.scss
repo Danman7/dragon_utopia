@@ -6,15 +6,31 @@ $background-color: #fff9f9;
 $text-color: #322;
 $dark-color: #030303;
 
-$content-width: 50em;
+$content-width: clamp(45ch, 50%, 75ch);
+
+@mixin shadow($shadow) {
+  box-shadow: 0 0 $shadow rgba(0, 0, 0, 0.5),
+    0 $shadow $shadow rgba(0, 0, 0, 0.5);
+}
 
 @mixin alert($color: $primary-color) {
   color: $background-color;
   background: $color;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 4px;
+  @include shadow(2px);
 
   h3 {
     margin-top: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+
+  [dir='rtl'] & {
+    #{$property}: $rtl-value;
   }
 }

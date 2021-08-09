@@ -49,7 +49,9 @@ const ArticleTemplate = ({ data }: ArticleProps) => {
                   <>
                     <a href={src}>
                       <motion.img
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{
+                          scale: 1.05,
+                        }}
                         whileTap={{ scale: 0.95 }}
                         src={src}
                         alt={alt}
